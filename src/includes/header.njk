@@ -1,0 +1,16 @@
+<header class="header container">
+  <button class="header__anchors-button">
+    M E N U
+  </button>
+  <nav class="menu">
+    <ul class="menu__list">
+      {% for item in menu %}
+        <li class="menu__item">
+          <a class="menu__link" href="{{ item.href }}">
+            {{- item.title -}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

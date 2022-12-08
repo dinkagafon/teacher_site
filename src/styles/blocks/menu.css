@@ -1,0 +1,12 @@
+.menu__list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  font-size: var(--font-size-text-medium);
+  margin: 0;
+  padding: 0;
+}
+.menu__link {
+  text-decoration: none;
+  color: var(--color-text-primary);
+}

@@ -1,4 +1,12 @@
 @import 'fonts.css';
+@import 'colors';
+
+@import 'global.css';
+
+
+@import 'blocks/header.css';
+@import 'blocks/menu.css';
+
 
 h1 {
   font-family: var(--font-family-heading);
