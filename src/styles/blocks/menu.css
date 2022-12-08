@@ -10,3 +10,10 @@
   text-decoration: none;
   color: var(--color-text-primary);
 }
+
+/* df */
+@media (max-width: 639px) {
+  .menu {
+    display: none;
+  }
+}

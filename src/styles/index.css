@@ -1,13 +1,13 @@
-@import 'fonts.css';
-@import 'colors';
+@import "fonts.css";
+@import "colors";
 
-@import 'global.css';
+@import "global.css";
 
-
-@import 'blocks/header.css';
-@import 'blocks/menu.css';
-
-
-h1 {
-  font-family: var(--font-family-heading);
-}
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/container.css";
+@import "blocks/hello.css";
+@import "blocks/highlight.css";
+@import "blocks/button.css";
+@import "blocks/die.css";
+@import "blocks/directions.css";

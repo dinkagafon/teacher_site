@@ -28,6 +28,10 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  ["src/img", "src/fonts"].forEach((path) =>
+    eleventyConfig.addPassthroughCopy(path)
+  );
+
   return {
     dir: {
       input: "src",

@@ -1,0 +1,124 @@
+.directions {
+  padding-top: 52px;
+  padding-bottom: 52px;
+  background: var(--color-reading-back);
+}
+
+.directions__header {
+  text-align: center;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-header);
+  font-size: var(--font-size-h2);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.directions__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.directions__content {
+  flex-basis: 344px;
+  flex-grow: 1;
+}
+
+.directions__age {
+  font-family: var(--color-text-primary);
+  font-size: var(--font-size-text-main);
+  margin-bottom: 8px;
+}
+
+.directions__title {
+  font-family: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  font-family: var(--font-family-header);
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.directions__screen {
+  width: 342px;
+  aspect-ratio: 5 / 3;
+  background: var(--color-reading-accent);
+  flex-grow: 1;
+  border-radius: 40px;
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .directions__wrapper {
+    padding-inline: 118px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .directions__wrapper {
+    padding-inline: 96px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .directions__wrapper {
+    padding-inline: 75px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .directions__wrapper {
+    padding-inline: 0;
+    flex-direction: column-reverse;
+  }
+  .directions__content {
+    text-align: center;
+    align-items: center;
+    flex-basis: initial;
+  }
+  .directions__screen {
+    width: 60%;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) and (max-width: 767px) {
+  .directions__wrapper {
+    padding-inline: 0;
+    flex-direction: column-reverse;
+  }
+  .directions__content {
+    text-align: center;
+    align-items: center;
+    flex-basis: initial;
+  }
+  .directions__screen {
+    width: 60%;
+  }
+}
+
+/* df */
+@media (max-width: 639px) {
+  .directions {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .directions__header {
+    margin-bottom: 24px;
+  }
+  .directions__wrapper {
+    padding-inline: 0;
+    flex-direction: column-reverse;
+  }
+  .directions__content {
+    text-align: center;
+    align-items: center;
+    flex-basis: initial;
+  }
+  .directions__screen {
+    width: 100%;
+  }
+}

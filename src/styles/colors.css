@@ -1,4 +1,12 @@
 :root {
   --color-main-back: #cfe5ff;
   --color-text-primary: #271100;
+  --color-main-accent-contrast: #0e6ee0;
+  --color-white-75: rgba(255, 255, 255, 0.75);
+  --white: #fff;
+  --main-accent: #689bd8;
+
+  --color-reading-back: #baf3ff;
+  --color-reading-accent: #90e4f5;
+  --color-reading-accent-contrast: #009ebf;
 }

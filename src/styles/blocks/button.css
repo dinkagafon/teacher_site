@@ -1,0 +1,36 @@
+.button {
+  border: 0;
+  background: transparent;
+}
+
+.button_connect {
+  font-size: var(--font-size-text-main);
+  text-decoration: none;
+
+  border-radius: 200px;
+  padding: 1em 2em;
+  display: inline-block;
+
+  color: var(--color-text-primary);
+  background-color: var(--color-white-75);
+}
+
+.button_second {
+  font-size: var(--font-size-text-small);
+  text-decoration: none;
+
+  border-radius: 200px;
+  padding: 1em 1.5em;
+  display: inline-block;
+
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-reading-accent-contrast);
+}
+
+/* df */
+@media (max-width: 639px) {
+  .button_connect {
+    width: 100%;
+  }
+}

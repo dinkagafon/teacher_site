@@ -1,9 +1,18 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  font-family: var(--font-family-text);
+  font-weight: 400;
+}
+
+p,
+h1,
+h2,
+h3 {
   margin: 0;
 }
