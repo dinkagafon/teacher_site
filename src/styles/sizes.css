@@ -1,0 +1,65 @@
+:root {
+  --grid-column-widht: calc(
+    (
+        min(1536px, 100vw) -
+          (
+            2 * var(--grid-margin) + (var(--grid-count) - 1) *
+              var(--grid-gutter)
+          )
+      ) / var(--grid-count)
+  );
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  :root {
+    --grid-margin: 72px;
+    --grid-gutter: 24px;
+    --grid-count: 12;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  :root {
+    --grid-margin: 72px;
+    --grid-gutter: 16px;
+    --grid-count: 12;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root {
+    --grid-margin: 72px;
+    --grid-gutter: 16px;
+    --grid-count: 12;
+  }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --grid-margin: 72px;
+    --grid-gutter: 24px;
+    --grid-count: 6;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) and (max-width: 767px) {
+  :root {
+    --grid-margin: 20px;
+    --grid-gutter: 16px;
+    --grid-count: 6;
+  }
+}
+
+/* df */
+@media (max-width: 639px) {
+  :root {
+    --grid-margin: 20px;
+    --grid-gutter: 24px;
+    --grid-count: 2;
+  }
+}

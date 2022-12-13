@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <svg id="arrow-next" viewBox="0 0 18 26" fill="none" stroke="currentcolor">
+    <path d="M1 1L17 13L1 25"/>
+  </svg>
+  <svg id="arrow-previous" viewBox="0 0 18 26" fill="none" stroke="currentcolor">
+    <path d="M17 25L1 13L17 1"/>
+  </svg>
+
+</svg>

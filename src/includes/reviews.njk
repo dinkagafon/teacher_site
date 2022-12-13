@@ -1,0 +1,41 @@
+<section class="reviews">
+  <h2 class="reviews__header">
+    8 направлений для всестороннего
+    развития ребенка
+  </h2>
+  <div class="slider" role="region" aria-label="Отзывы" tabindex="0">
+    <ul class="slider__container">
+      {% for comment in comments %}
+        <li class="slider__elem">
+          <div class="comment">
+            <span class="comment__author">{{- comment.author -}}</span>
+            <p class="comment__text">
+              {{- comment.text -}}
+            </p>
+            <div class="comment__direction-container">
+              {% for direct in comment.directs %}
+                <span class="comment__direction">{{- direct -}}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="slider__controls" aria-label="Контролы галереи">
+      <li>
+        <button id="previous" class="slider__button" aria-label="Предыдущий">
+          <svg aria-hidden="true" focusable="false" width="16" height="24">
+            <use href="/img/icons.svg#arrow-previous"/>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button id="next" class="slider__button" aria-label="Следующий">
+          <svg aria-hidden="true" focusable="false" width="16" height="24">
+            <use href="/img/icons.svg#arrow-next"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>

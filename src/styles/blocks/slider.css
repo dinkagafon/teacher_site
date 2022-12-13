@@ -1,0 +1,108 @@
+.slider {
+  overflow: hidden;
+}
+
+.slider__container {
+  white-space: nowrap;
+  padding: 24px 0;
+  margin: 0;
+  overflow: hidden;
+  touch-action: none;
+  position: relative;
+}
+
+.slider__elem {
+  --slider_elem-margin: calc(
+    50% -
+      (
+        (var(--comment-count-columns) / 2 * var(--grid-column-widht)) +
+          ((var(--comment-count-columns) / 2 - 1) * var(--grid-gutter)) +
+          var(--grid-gutter) / 2
+      )
+  );
+  width: calc(
+    (var(--grid-column-widht) * var(--comment-count-columns)) +
+      (var(--grid-gutter) * (var(--comment-count-columns) - 1))
+  );
+  display: inline-block;
+  user-select: none;
+}
+
+.slider__elem:first-child {
+  margin-left: var(--slider_elem-margin);
+}
+
+.slider__elem:last-child {
+  margin-right: var(--slider_elem-margin);
+}
+
+.slider__elem:not(:last-child) {
+  margin-right: calc(
+    (var(--grid-column-widht) * var(--slider__elem-cc-gap)) +
+      (var(--grid-gutter) * (var(--slider__elem-cc-gap) + 1))
+  );
+}
+
+.slider__controls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.slider__button {
+  background-color: transparent;
+  padding: 20px 26px 20px 22px;
+  border-radius: 50px;
+  border: 1px solid var(--color-main-back);
+  cursor: pointer;
+}
+
+@media (min-width: 1536px) {
+  .slider__elem {
+    --comment-count-columns: 6;
+    --slider__elem-cc-gap: 1;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .slider__elem {
+    --slider__elem-cc-gap: 1;
+    --comment-count-columns: 6;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .slider__elem {
+    --slider__elem-cc-gap: 1;
+    --comment-count-columns: 6;
+  }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slider__elem {
+    --slider__elem-cc-gap: 0;
+    --comment-count-columns: 4;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) and (max-width: 767px) {
+  .slider__elem {
+    --slider__elem-cc-gap: 0;
+    --comment-count-columns: 4;
+  }
+}
+
+/* df */
+@media (max-width: 639px) {
+  .slider__elem {
+    --slider__elem-cc-gap: 0;
+    --comment-count-columns: 2;
+  }
+}

@@ -1,6 +1,7 @@
 const postcss = require("postcss");
 const postcssImport = require("postcss-import");
 const yaml = require("js-yaml");
+const esbuild = require("esbuild");
 
 module.exports = function (eleventyConfig) {
   const rootStyle = "./src/styles/index.css";
@@ -31,6 +32,29 @@ module.exports = function (eleventyConfig) {
   ["src/img", "src/fonts"].forEach((path) =>
     eleventyConfig.addPassthroughCopy(path)
   );
+
+  eleventyConfig.addTemplateFormats("js");
+
+  eleventyConfig.addExtension("js", {
+    outputFileExtension: "js",
+    compile: async (_, path) => {
+      if (path !== "./src/scripts/index.js") {
+        return () => {};
+      }
+
+      return async () => {
+        let output = await esbuild.build({
+          target: "es2020",
+          entryPoints: [path],
+          minify: true,
+          bundle: true,
+          write: false,
+        });
+
+        return output.outputFiles[0].text;
+      };
+    },
+  });
 
   return {
     dir: {

@@ -1,0 +1,44 @@
+.comment {
+  box-shadow: 0px 0px 38px rgba(129, 172, 181, 0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__author {
+  font-size: var(--font-size-text-small);
+  color: var(--color-text-secondary);
+}
+
+.comment__text {
+  font-size: var(--font-size-text-main);
+  color: var(--color-text-primary);
+  white-space: initial;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  flex-basis: 235px;
+}
+
+.comment__direction-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.comment__direction {
+  font-size: var(--font-size-text-small);
+  color: var(--color-text-primary);
+  padding: 8px 16px;
+  background-color: var(--color-reading-back);
+  border-radius: 20px;
+}
+
+/* df */
+@media (max-width: 639px) {
+  .comment {
+    padding: 32px 16px;
+  }
+}
