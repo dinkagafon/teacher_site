@@ -1,0 +1,26 @@
+<section class="experience">
+  <h2 class="experience__header">
+    8 направлений для всестороннего
+    развития ребенка
+  </h2>
+  <div class="experience__slider swiper" role="region" aria-label="Отзывы" tabindex="0">
+    <ul class="experience__slider-container swiper-wrapper" >
+      {% for stage in stages %}
+        <li class="experience__slider-elem swiper-slide">
+          <div class="stage">
+
+            <div class="stage__content">
+              <h3 class="stage__title">{{- stage.title -}}</h3>
+              <p class="stage__discrip">
+                {{- stage.discrip -}}
+              </p>
+            </div>
+
+            <div class="stage__year">{{ stage.year | safe }}</div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="experience__slider-pagination swiper-pagination"></div>
+  </div>
+</section>

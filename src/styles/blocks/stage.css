@@ -1,0 +1,103 @@
+.stage {
+  cursor: pointer;
+}
+
+.stage__content {
+  overflow: hidden;
+}
+
+.stage__title {
+  font-size: var(--font-size-h3);
+  font-family: var(--font-family-header);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.stage__discrip {
+  font-size: var(--font-size-text-main);
+  height: 0;
+}
+
+.stage__year {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-text-main);
+  background-color: var(--color-main-back);
+  height: var(--diameter);
+  width: var(--diameter);
+  border-radius: var(--diameter);
+  padding: 0;
+  margin-top: 24px;
+  position: relative;
+  margin-left: 15%;
+  cursor: pointer;
+}
+
+.stage__year::before {
+  content: "";
+  height: var(--diameter);
+  width: var(--diameter);
+  background-color: var(--color-main-accent-noncontrast);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1, 1);
+  border-radius: var(--diameter);
+}
+
+.stage_active .stage__discrip {
+  height: auto;
+}
+
+.stage_active .stage__year {
+  transform: scale(1.3333, 1.3333);
+}
+
+.stage_active .stage__year::before {
+  transform: translate(-50%, -50%) scale(1.5, 1.5);
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .stage__year {
+    --diameter: 100px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .stage__year {
+    --diameter: 80px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .stage__year {
+    --diameter: 70px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .stage__year {
+    --diameter: 70px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) and (max-width: 767px) {
+  .stage__year {
+    --diameter: 70px;
+  }
+}
+
+/* df */
+@media (max-width: 639px) {
+  .stage__year {
+    --diameter: 60px;
+  }
+}

@@ -3,6 +3,7 @@
   --color-text-primary: #271100;
   --color-text-secondary: #676666;
   --color-main-accent-contrast: #0e6ee0;
+  --color-main-accent-noncontrast: rgba(207, 229, 255, 0.3);
   --color-white-75: rgba(255, 255, 255, 0.75);
   --white: #fff;
   --main-accent: #689bd8;
