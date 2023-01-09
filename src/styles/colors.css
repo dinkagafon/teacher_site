@@ -11,4 +11,60 @@
   --color-reading-back: #baf3ff;
   --color-reading-accent: #90e4f5;
   --color-reading-accent-contrast: #009ebf;
+  --color-reading-linear: linear-gradient(180deg, #57e2ff 25%, #009ebf 78.99%);
+
+  --color-pre_school-back: #f5d9fc;
+  --color-pre_school-accent: #f1b9ff;
+  --color-pre_school-accent-contrast: #af2fcf;
+  --color-pre_school-linear: linear-gradient(
+    180deg,
+    #f0b6ff 25%,
+    #af2fcf 78.99%
+  );
+
+  --color-cognition-back: #e3dafc;
+  --color-cognition-accent: #d2c1ff;
+  --color-cognition-accent-contrast: #977ae9;
+  --color-cognition-linear: linear-gradient(
+    180deg,
+    #d2c1ff 25%,
+    #8765e0 78.99%
+  );
+
+  --color-speed_reading-back: #b8ffd4;
+  --color-speed_reading-accent: #7ceeaa;
+  --color-speed_reading-accent-contrast: #39a865;
+  --color-speed_reading-linear: linear-gradient(
+    180deg,
+    #3bf082 25%,
+    #39a865 78.99%
+  );
+
+  --color-olimpiad_math-back: #ffede0;
+  --color-olimpiad_math-accent: #ffd0ad;
+  --color-olimpiad_math-accent-contrast: #ec8132;
+  --color-olimpiad_math-linear: linear-gradient(
+    180deg,
+    #fdbd8d 25%,
+    #ec8132 78.99%
+  );
+
+  --color-mental-back: #dfe1f9;
+  --color-mental-accent: #c6cafe;
+  --color-mental-accent-contrast: #616df1;
+  --color-mental-linear: linear-gradient(180deg, #a9b0ff 25%, #616df1 78.99%);
+
+  --color-primary_school-back: #fcd9ea;
+  --color-primary_school-accent: #ffb4d8;
+  --color-primary_school-accent-contrast: #ef4496;
+  --color-primary_school-linear: linear-gradient(
+    180deg,
+    #fdbddc 25%,
+    #fd3e9b 78.99%
+  );
+
+  --color-math-back: #d9e9fc;
+  --color-math-accent: #aed2fd;
+  --color-math-accent-contrast: #529cf4;
+  --color-math-linear: linear-gradient(180deg, #aed2fd 25%, #529cf4 78.99%);
 }

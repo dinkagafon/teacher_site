@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+* {
+  line-height: 130%;
+}
+
 body {
   margin: 0;
   font-family: var(--font-family-text);
@@ -16,4 +20,13 @@ h1,
 h2,
 h3 {
   margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-family-header);
+}
+
+h3 {
+  font-family: var(--font-family-header-secondary);
 }

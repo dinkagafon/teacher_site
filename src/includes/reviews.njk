@@ -1,7 +1,6 @@
 <section class="reviews">
   <h2 class="reviews__header">
-    8 направлений для всестороннего
-    развития ребенка
+    «Учитель – человек, который может делать трудные вещи лёгкими» Ральф Эмерсон
   </h2>
   <div class="swiper slider" role="region" aria-label="Отзывы" tabindex="0">
     <ul class="swiper-wrapper slider__container" >
@@ -12,9 +11,9 @@
             <p class="comment__text">
               {{- comment.text -}}
             </p>
-            <div class="comment__direction-container">
+            <div class="comment__direction-container" >
               {% for direct in comment.directs %}
-                <span class="comment__direction">{{- direct -}}</span>
+                <span class="comment__direction" style="background-color: var(--color-{{ direct }}-back">{{- directions[direct].name -}}</span>
               {% endfor %}
             </div>
           </div>

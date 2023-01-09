@@ -1,43 +1,75 @@
 <section class="request">
-  <form action="mailto:nikitagafon@yandex.ru" enctype="text/plain">
-    <label>
-      Имя родителя
-      <input type="text" name="parent" id="parent" placeholder="Анастасия Андреевна" required autofocus>
-    </label>
-    <label>
-      Имя ребенка
-      <input type="text" name="children" id="children" placeholder="Ксения" required>
-    </label>
-    <label>
-      Телефон
-      <input type="phone" name="parent" id="parent" placeholder="Анастасия Андреевна" required>
-    </label>
-    <fieldset>
-      <legend>Направления</legend>
-      <label>
-        Ментальная арифметика
-        <input type="checkbox" name="direction" value="mental">
+  <form action="mailto:nikitagafon@yandex.ru" enctype="text/plain" class="request__form form">
+    <label for="parent"  class="form__title">Имя родителя</label>
+    <input type="text" name="parent" id="parent" placeholder="Анастасия Андреевна" required>
+
+    <label for="children"  class="form__title">Имя ребенка</label>
+    <input type="text" name="children" id="children" placeholder="Ксения" required>
+    <label for="phone"  class="form__title">Телефон</label>
+    <input type="phone" name="parent" id="phone" placeholder="+7 (977) 267-23-77" required>
+    <span class="form__title form__title_top">Направления</span>
+    <div class="form__checkbox-container">
+      <input type="checkbox" name="direction" value="mental" id="mental">
+      <label class="form__checkbox" for="mental">
+        ментальная арифметика
       </label>
-      <label>
-        Начальная школа
-        <input type="checkbox" name="direction" value="primary">
+      <input type="checkbox" name="direction" value="reading" id="reading">
+      <label class="form__checkbox" for="reading">
+        словолодочки
       </label>
-    </fieldset>
-    <fieldset>
-      <legend>Способ связи</legend>
-      <label>
+      <div class="form__checkbox-new-row"></div>
+      <input type="checkbox" name="direction" value="cognition" id="cognition">
+      <label class="form__checkbox" for="cognition">
+        позновательные способности
+
+      </label>
+      <input type="checkbox" name="direction" value="speed_reading" id="speed_reading">
+      <label class="form__checkbox" for="speed_reading">
+        скорочтение
+
+      </label>
+      <div class="form__checkbox-new-row"></div>
+      <input type="checkbox" name="direction" value="pre_school" id="pre_school">
+      <label class="form__checkbox" for="pre_school">
+        подготовка к школе
+
+      </label>
+      <input type="checkbox" name="direction" value="primary_school" id="primary_school">
+      <label class="form__checkbox" for="primary_school">
+        начальные классы
+
+      </label>
+      <div class="form__checkbox-new-row"></div>
+      <input type="checkbox" name="direction" value="math" id="math">
+      <label class="form__checkbox" for="math">
+        математика
+
+      </label>
+      <input type="checkbox" name="direction" value="olimpiad_math" id="olimpiad_math">
+      <label class="form__checkbox" for="olimpiad_math">
+        олимпиадная математика
+
+      </label>
+    </div>
+    <span class="form__title form__title_top">Способ связи</span>
+    <div class="form__checkbox-container form__checkbox-container_mobile-one-row">
+      <input type="checkbox" name="connect" value="telegram" id="telegram">
+      <label class="form__checkbox" for="telegram">
         telegram
-        <input type="checkbox" name="connect" value="telegram">
+
       </label>
-      <label>
+      <input type="checkbox" name="connect" value="whatsup" id="whatsup">
+      <label class="form__checkbox" for="whatsup">
         whatsup
-        <input type="checkbox" name="connect" value="whatsup">
+
       </label>
-      <label>
+      <input type="checkbox" name="connect" value="sms" id="sms">
+      <label class="form__checkbox" for="sms">
         sms
-        <input type="checkbox" name="connect" value="sms">
+
       </label>
-    </fieldset>
-    <button type="submit">Оставить заявку</button>
+    </div>
+    <button type="submit" class="form__submit button button_connect">Оставить заявку</button>
   </form>
+
 </section>

@@ -16,15 +16,16 @@
 
 @font-face {
   font-weight: 400;
-  font-family: "Tinos";
+  font-family: "Concrete";
   font-style: normal;
-  src: url("/fonts/tinos-regular.woff2") format("woff2"),
-    url("/fonts/tinos-regular.woff") format("woff");
+  src: url("/fonts/concrete-regular.woff2") format("woff2"),
+    url("/fonts/concrete-regular.woff") format("woff");
 }
 
 :root {
   --font-family-text: Montserrat, sans-serif;
-  --font-family-header: Tinos, serif;
+  --font-family-header: Concrete, sans-serif;
+  --font-family-header-secondary: Montserrat, sans-serif;
 }
 
 /* 2xl */

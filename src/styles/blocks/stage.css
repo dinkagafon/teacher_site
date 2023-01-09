@@ -1,21 +1,28 @@
 .stage {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .stage__content {
   overflow: hidden;
+  margin-left: 30%;
 }
 
 .stage__title {
   font-size: var(--font-size-h3);
-  font-family: var(--font-family-header);
   font-weight: 400;
   margin-bottom: 8px;
+}
+.stage__discrip-wrapper {
+  height: 0;
+  transition-property: height, transform, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .stage__discrip {
   font-size: var(--font-size-text-main);
-  height: 0;
 }
 
 .stage__year {
@@ -30,10 +37,11 @@
   width: var(--diameter);
   border-radius: var(--diameter);
   padding: 0;
-  margin-top: 24px;
+  margin-top: 75px;
   position: relative;
-  margin-left: 15%;
   cursor: pointer;
+  align-self: center;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .stage__year::before {
@@ -46,10 +54,12 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1, 1);
   border-radius: var(--diameter);
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.stage_active .stage__discrip {
-  height: auto;
+.stage:not(.stage_active) .stage__discrip-wrapper {
+  transform: translateY(2.5rem);
+  opacity: 0;
 }
 
 .stage_active .stage__year {
@@ -60,44 +70,48 @@
   transform: translate(-50%, -50%) scale(1.5, 1.5);
 }
 
-/* 2xl */
-@media (min-width: 1536px) {
-  .stage__year {
-    --diameter: 100px;
-  }
-}
-
-/* xl */
-@media (min-width: 1280px) and (max-width: 1535px) {
-  .stage__year {
-    --diameter: 80px;
-  }
-}
-
-/* lg */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .stage__year {
-    --diameter: 70px;
-  }
+.stage:hover .stage__year::before {
+  transform: translate(-50%, -50%) scale(1.5, 1.5);
 }
 
 /* md */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .stage {
+    padding-inline: 64px;
+  }
   .stage__year {
-    --diameter: 70px;
+    margin-left: 41px;
+    align-self: initial;
+  }
+  .stage__content {
+    margin-left: 0;
   }
 }
 
 /* sm */
 @media (min-width: 640px) and (max-width: 767px) {
+  .stage {
+    padding-inline: 64px;
+  }
   .stage__year {
-    --diameter: 70px;
+    margin-left: 41px;
+    align-self: initial;
+  }
+  .stage__content {
+    margin-left: 0;
   }
 }
 
 /* df */
 @media (max-width: 639px) {
+  .stage {
+    padding-inline: 64px;
+  }
   .stage__year {
-    --diameter: 60px;
+    margin-left: 41px;
+    align-self: initial;
+  }
+  .stage__content {
+    margin-left: 0;
   }
 }

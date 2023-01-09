@@ -1,0 +1,16 @@
+reading:
+  name: Словолодочки
+pre_school:
+  name: Подготовка к школе
+primary_school:
+  name: Начальная школа
+cognition:
+  name: Позновательные способномти
+speed_reading:
+  name: Скорочтение
+mental:
+  name: Ментальная арифметика
+olimpiad_math:
+  name: Олимпиадная математика
+math:
+  name: Математика

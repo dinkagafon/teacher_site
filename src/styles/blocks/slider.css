@@ -31,9 +31,16 @@
   justify-content: center;
 }
 
+.swiper-button-prev {
+  padding: 24px 30px 20px 26px;
+}
+
+.swiper-button-next {
+  padding: 24px 26px 20px 30px;
+}
+
 .slider__button {
   background-color: transparent;
-  padding: 20px 26px 20px 22px;
   border-radius: 50px;
   border: 1px solid var(--color-main-back);
   cursor: pointer;
