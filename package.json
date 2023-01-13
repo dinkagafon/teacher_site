@@ -22,6 +22,7 @@
     "not dead"
   ],
   "dependencies": {
+    "locomotive-scroll": "^4.1.4",
     "swiper": "^8.4.5"
   }
 }

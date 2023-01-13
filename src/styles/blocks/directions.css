@@ -1,11 +1,7 @@
 .directions {
-  padding-top: 52px;
-  padding-bottom: 52px;
   background: var(--color-reading-back);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  transition: all 0.6s linear;
+  position: relative;
 }
 
 .directions__header {
@@ -21,6 +17,7 @@
   flex-wrap: wrap;
   gap: 40px;
   align-items: center;
+  height: 100vh;
 }
 
 .directions__content {
@@ -41,16 +38,46 @@
   margin-bottom: 32px;
 }
 
-.directions__screen {
-  width: 342px;
-  aspect-ratio: 5 / 5;
-  background: var(--color-reading-accent);
-  flex-grow: 1;
-  border-radius: 40px;
+.directions__screen-wrapper {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
 }
 
+.directions__screen {
+  width: calc(
+    (var(--grid-column-widht) * var(--directons-screen-count-columns)) +
+      (var(--grid-gutter) * (var(--directons-screen-count-columns) - 1))
+  );
+  aspect-ratio: 5 / 5;
+  background: var(--color-reading-accent);
+  border-radius: 40px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  overflow: hidden;
+}
+
+.directions__container {
+  margin-top: -100vh;
+}
+
+.directions__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-out;
+}
 /* 2xl */
 @media (min-width: 1536px) {
+  .directions__screen {
+    --directons-screen-count-columns: 5;
+  }
+
   .directions__wrapper {
     padding-inline: 118px;
   }
@@ -58,6 +85,9 @@
 
 /* xl */
 @media (min-width: 1280px) and (max-width: 1535px) {
+  .directions__screen {
+    --directons-screen-count-columns: 6;
+  }
   .directions__wrapper {
     padding-inline: 96px;
   }
@@ -65,6 +95,9 @@
 
 /* lg */
 @media (min-width: 1024px) and (max-width: 1279px) {
+  .directions__screen {
+    --directons-screen-count-columns: 5;
+  }
   .directions__wrapper {
     padding-inline: 75px;
   }
@@ -72,6 +105,10 @@
 
 /* md */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .directions__screen {
+    --directons-screen-count-columns: 4;
+  }
+
   .directions__wrapper {
     padding-inline: 0;
     flex-direction: column-reverse;
@@ -88,6 +125,9 @@
 
 /* sm */
 @media (min-width: 640px) and (max-width: 767px) {
+  .directions__screen {
+    --directons-screen-count-columns: 4;
+  }
   .directions__wrapper {
     padding-inline: 0;
     flex-direction: column-reverse;
@@ -104,6 +144,9 @@
 
 /* df */
 @media (max-width: 639px) {
+  .directions__screen {
+    --directons-screen-count-columns: 2;
+  }
   .directions {
     padding-top: 40px;
     padding-bottom: 40px;

@@ -2,17 +2,32 @@
   {# <h2 class="directions__header">
     8 направлений для всестороннего
     развития ребенка
-  </h2> #}
-  <div class="directions__wrapper">
-    <div class="directions__content">
-      <p class="directions__age">
-        4 - 7 лет
-      </p>
-      <h3 class="directions__title">
-        Обучение чтению <br> по методике Словолодочки
-      </h3>
-      <a href="#" class="directions__link button button_second">Подробнее</a>
+  </h2> d#}
+
+  <div class="directions__screen-wrapper">
+    <div class="directions__screen">
+      {% for name, params in directions %}
+        <a href="#">
+          <div class="directions__image" data-direction="{{- name -}}" style="z-index: {{- loop.revindex -}}; background-image: url(/img/directions/{{- name -}}_preview.jpg);"></div>
+        </a>
+      {% endfor %}
     </div>
-    <div class="directions__screen"></div>
+  </div>
+  <div class="directions__container">
+    {% for name, params in directions %}
+      <div class="directions__wrapper" data-title="{{- name -}}">
+        <div class="directions__content" >
+          <p class="directions__age">
+            {{- params.age -}}
+          </p>
+          <h3 class="directions__title">
+            {{ params.full_name }}
+          </h3>
+          <a href="#" class="directions__link button button_second" style="border-color: var(--color-{{- name -}}-accent-contrast)">Подробнее</a>
+        </div>
+
+      </div>
+
+    {% endfor %}
   </div>
 </section>
