@@ -11,6 +11,7 @@
             <p class="comment__text">
               {{- comment.text -}}
             </p>
+            <button class="comment__show-more-button comment__show-more-button_hidden">Показать больше</button>
             <div class="comment__direction-container" >
               {% for direct in comment.directs %}
                 <span class="comment__direction" style="background-color: var(--color-{{ direct }}-back">{{- directions[direct].name -}}</span>

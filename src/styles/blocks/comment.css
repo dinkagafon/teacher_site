@@ -18,14 +18,44 @@
   color: var(--color-text-primary);
   white-space: initial;
   margin-top: 12px;
-  margin-bottom: 50px;
-  flex-basis: 235px;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.comment__text_show {
+  -webkit-line-clamp: unset;
+}
+
+.comment__show-more-button {
+  margin-top: 16px;
+  text-decoration: underline;
+  font-family: var(--font-size-text-small);
+  color: var(--color-text-secondary);
+  transition: all 0.2s ease-in;
+  border: none;
+  background-color: transparent;
+  display: inline;
+  padding: 0;
+  width: max-content;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.comment__show-more-button_hidden {
+  visibility: hidden;
+}
+
+.comment__show-more-button:hover {
+  color: var(--color-text-primary);
 }
 
 .comment__direction-container {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: auto;
 }
 
 .comment__direction {

@@ -1,5 +1,7 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
+const comments = document.querySelectorAll(".slider__elem");
+
 const swiper = new Swiper(".slider", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -10,6 +12,18 @@ const swiper = new Swiper(".slider", {
     prevEl: ".swiper-button-prev",
   },
   modules: [Navigation],
+  on: {
+    activeIndexChange: (swiper) => {
+      const comment__text =
+        comments[swiper.previousIndex].querySelector(".comment__text");
+      console.log(comment__text);
+      if (comment__text.classList.contains("comment__text_show")) {
+        comment__text.classList.remove("comment__text_show");
+        comment__text.nextElementSibling.textContent = "Показать больше";
+        comment__text.parentElement.parentElement.style.height = "";
+      }
+    },
+  },
 });
 
 const expirienceStages = document.querySelectorAll(".stage");

@@ -46,18 +46,36 @@
   position: absolute;
   bottom: 22%;
   left: -20%;
+  animation: float 4s ease-in-out infinite;
 }
 
 .hello__online {
   position: absolute;
   top: 5%;
   right: -10%;
+  animation: float 3.5s ease-in-out infinite;
+  animation-direction: reverse;
+  animation-delay: 0.5s;
 }
 
 .hello__phone {
   position: absolute;
   bottom: 10%;
   right: -15%;
+  animation: float 3.8s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -30%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 /* 2xl */

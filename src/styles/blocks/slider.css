@@ -13,14 +13,8 @@
       (var(--grid-gutter) * (var(--comment-count-columns) - 1))
   );
   display: inline-block;
+  height: 422px;
 }
-
-/* .slider__elem:not(:last-child) {
-  margin-right: calc(
-    (var(--grid-column-widht) * var(--slider__elem-cc-gap)) +
-      (var(--grid-gutter) * (var(--slider__elem-cc-gap) + 1))
-  );
-} */
 
 .slider__controls {
   list-style: none;
