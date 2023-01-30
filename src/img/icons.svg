@@ -5,5 +5,9 @@
   <svg id="arrow-previous" viewBox="0 0 18 26" fill="none" stroke="currentcolor">
     <path d="M17 25L1 13L17 1"/>
   </svg>
-
+  <svg id="close" viewBox="0 0 38 37" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <line y1="-0.5" x2="50" y2="-0.5" transform="matrix(0.707107 -0.707107 0.722764 0.691095 1.32239 36.5)" stroke="#271100"/>
+    <line y1="-0.5" x2="50" y2="-0.5" transform="matrix(0.707107 0.707107 -0.722764 0.691095 1.32239 1.5)" stroke="#271100"/>
+  </svg>
 </svg>

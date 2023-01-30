@@ -1,9 +1,4 @@
 <section class="directions container">
-  {# <h2 class="directions__header">
-    8 направлений для всестороннего
-    развития ребенка
-  </h2> d#}
-
   <div class="directions__screen-wrapper">
     <div class="directions__screen">
       {% for name, params in directions %}
@@ -16,6 +11,11 @@
   <div class="directions__container">
     {% for name, params in directions %}
       <div class="directions__wrapper" data-title="{{- name -}}">
+        <div class="directions__screen directions__screen_mobile">
+          <a href="#">
+            <div class="directions__image" data-direction="{{- name -}}" style="z-index: {{- loop.revindex -}}; background-image: url(/img/directions/{{- name -}}_preview.jpg);"></div>
+          </a>
+        </div>
         <div class="directions__content" >
           <p class="directions__age">
             {{- params.age -}}
@@ -23,7 +23,14 @@
           <h3 class="directions__title">
             {{ params.full_name }}
           </h3>
-          <a href="#" class="directions__link button button_second" style="border-color: var(--color-{{- name -}}-accent-contrast)">Подробнее</a>
+          <a href="#" class="directions__link button button_second" style="border-color: var(--color-{{- name -}}-accent-contrast)">
+            <span class="button__ripple">
+              <span></span>
+            </span>
+            <span class="button__text">
+              <span data-text="Подробнее">Подробнее</span>
+            </span>
+          </a>
         </div>
 
       </div>

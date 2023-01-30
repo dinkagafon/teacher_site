@@ -1,0 +1,24 @@
+.direction-starter {
+  --starter-count-columns: 6;
+  padding: 52px 0;
+}
+
+.direction_starter__container {
+  margin: 0 auto;
+  width: calc(
+    (var(--grid-column-widht) * var(--starter-count-columns)) +
+      (var(--grid-gutter) * (var(--starter-count-columns) - 1))
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.direction-starter__header {
+  margin-bottom: 16px;
+}
+
+.direction-starter__discrip {
+  margin-bottom: 16px;
+  text-align: center;
+}

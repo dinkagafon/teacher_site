@@ -32,4 +32,5 @@ h2 {
 
 h3 {
   font-family: var(--font-family-header-secondary);
+  font-weight: 500;
 }

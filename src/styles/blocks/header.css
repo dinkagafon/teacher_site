@@ -6,7 +6,7 @@
   background-color: var(--color-main-back);
 }
 
-.header__anchors-button.button {
+.header__menu-button.button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;

@@ -1,19 +1,43 @@
-<header class="header container">
-  <button class="header__anchors-button button">
-    <span>M</span>
-    <span>E</span>
-    <span>N</span>
-    <span>U</span>
+{% if direct %}
+  {% set background = "--color-"+ direct +"-accent" %}
+{% else %}
+  {% set background = "--color-main-back" %}
+{% endif %}
+
+<div class="menu">
+  <button class="menu__close-button button">
+    <svg aria-hidden="true" focusable="false" width="42" height="42">
+      <use href="/img/icons.svg#close"/>
+    </svg>
   </button>
-  <nav class="menu">
+  <nav>
     <ul class="menu__list">
-      {% for item in menu %}
+      {% for name, params in directions %}
         <li class="menu__item">
-          <a class="menu__link" href="{{ item.href }}">
-            {{- item.title -}}
+          <a class="menu__link" href="/directions/{{ name }}">
+            {{- params.name -}}
           </a>
         </li>
       {% endfor %}
     </ul>
   </nav>
+</div>
+<header class="header container" style='background-color: var({{ background }})'>
+  <button class="header__menu-button button">
+    <span>M</span>
+    <span>E</span>
+    <span>N</span>
+    <span>U</span>
+  </button>
+  <div class="anchors">
+    <ul class="anchors__list">
+      {% for item in anchors %}
+        <li class="anchors__item">
+          <a class="anchors__link" href="{{ item.href }}">
+            {{- item.title -}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </header>

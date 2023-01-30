@@ -85,7 +85,7 @@
 .form__submit {
   grid-column-start: 1;
   grid-column-end: 3;
-  margin-top: 40px;
+  margin-top: 16px;
   justify-self: center;
   margin-left: -72px;
 }

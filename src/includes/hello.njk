@@ -1,6 +1,9 @@
 <section class="hello container">
   <div class="hello__photo">
     <div class="hello__arch">
+      <picture class="hello__img">
+        <img src="/img/photos/pic_main_page.png" alt="Фотография Юлии">
+      </picture>
       <div class="hello__work-time die">25 лет стаж работы</div>
       <div class="hello__online die">онлайн обучение</div>
       <a href="tel: +79153556431" class="hello__phone">
@@ -22,7 +25,14 @@
     направлениям. <span class="hello__mobile-hidden"> Для&nbsp;изучения нового не&nbsp;придется даже
     выходить из&nbsp;дома -&nbsp;занятия проходят в&nbsp;онлайн&nbsp;формате </span>
     </p>
-    <a href="/" class="hello__button button button_connect">Связаться</a>
+    <a href="/" class="hello__button button button_connect">
+      <span class="button__ripple">
+        <span></span>
+      </span>
+      <span class="button__text">
+        <span data-text="Связаться">Связаться</span>
+      </span>
+    </a>
   </div>
 
 </section>

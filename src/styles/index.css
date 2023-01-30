@@ -6,6 +6,7 @@
 @import "global.css";
 
 @import "blocks/header.css";
+@import "blocks/anchors.css";
 @import "blocks/menu.css";
 @import "blocks/container.css";
 @import "blocks/hello.css";
@@ -20,3 +21,4 @@
 @import "blocks/experience.css";
 @import "blocks/form.css";
 @import "blocks/request.css";
+@import "blocks/direction-starter.css";

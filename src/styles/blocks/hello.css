@@ -12,6 +12,23 @@
   flex-grow: 1;
 }
 
+.hello__img {
+  width: 118%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  transform: translate(-50%, 0);
+  left: 46%;
+}
+
+.hello__img img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
 .hello__arch {
   width: 80%;
   background-color: aliceblue;
@@ -51,7 +68,7 @@
 
 .hello__online {
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: -10%;
   animation: float 3.5s ease-in-out infinite;
   animation-direction: reverse;
@@ -188,15 +205,15 @@
     border-top-right-radius: 400px;
   }
   .hello__work-time {
-    bottom: 22%;
-    left: -5%;
+    bottom: 16%;
+    left: -15%;
   }
   .hello__online {
     top: 5%;
     right: 3%;
   }
   .hello__phone {
-    bottom: 10%;
-    right: -10%;
+    bottom: 5%;
+    right: -13%;
   }
 }
