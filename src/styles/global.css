@@ -34,3 +34,7 @@ h3 {
   font-family: var(--font-family-header-secondary);
   font-weight: 500;
 }
+
+a {
+  text-decoration: none;
+}

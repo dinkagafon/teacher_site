@@ -6,6 +6,7 @@
 @import "global.css";
 
 @import "blocks/header.css";
+@import "blocks/footer.css";
 @import "blocks/anchors.css";
 @import "blocks/menu.css";
 @import "blocks/container.css";
@@ -22,3 +23,10 @@
 @import "blocks/form.css";
 @import "blocks/request.css";
 @import "blocks/direction-starter.css";
+@import "blocks/direction-content.css";
+@import "blocks/direction-what.css";
+@import "blocks/direction-percents.css";
+@import "blocks/direction-numbers.css";
+@import "blocks/direction-why.css";
+@import "blocks/prise.css";
+@import "blocks/faq.css";

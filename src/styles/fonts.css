@@ -33,9 +33,13 @@
   :root {
     --font-size-text-small: 20px;
     --font-size-text-main: 24px;
+    --font-size-text-big: 28px;
+    --font-size-text-benefit: 70px;
+    --font-size-text-number: 120px;
     --font-size-h1: 40px;
     --font-size-h2: 36px;
     --font-size-h3: 32px;
+    --font-size-number: 120px;
   }
 }
 
@@ -44,9 +48,13 @@
   :root {
     --font-size-text-small: 16px;
     --font-size-text-main: 20px;
+    --font-size-text-big: 24px;
+    --font-size-text-benefit: 64px;
+    --font-size-text-number: 120px;
     --font-size-h1: 36px;
     --font-size-h2: 32px;
     --font-size-h3: 28px;
+    --font-size-number: 120px;
   }
 }
 
@@ -55,9 +63,13 @@
   :root {
     --font-size-text-small: 14px;
     --font-size-text-main: 18px;
+    --font-size-text-big: 20px;
+    --font-size-text-benefit: 56px;
+    --font-size-text-number: 120px;
     --font-size-h1: 28px;
     --font-size-h2: 26px;
     --font-size-h3: 24px;
+    --font-size-number: 120px;
   }
 }
 
@@ -66,9 +78,13 @@
   :root {
     --font-size-text-small: 14px;
     --font-size-text-main: 18px;
+    --font-size-text-big: 20px;
+    --font-size-text-benefit: 40px;
+    --font-size-text-number: 120px;
     --font-size-h1: 28px;
     --font-size-h2: 26px;
     --font-size-h3: 24px;
+    --font-size-number: 120px;
   }
 }
 
@@ -77,9 +93,13 @@
   :root {
     --font-size-text-small: 14px;
     --font-size-text-main: 18px;
+    --font-size-text-big: 20px;
+    --font-size-text-benefit: 36px;
+    --font-size-text-number: 120px;
     --font-size-h1: 28px;
     --font-size-h2: 26px;
     --font-size-h3: 24px;
+    --font-size-number: 120px;
   }
 }
 
@@ -88,8 +108,12 @@
   :root {
     --font-size-text-small: 14px;
     --font-size-text-main: 16px;
+    --font-size-text-big: 16px;
+    --font-size-text-benefit: 20px;
+    --font-size-text-number: 80px;
     --font-size-h1: 26px;
     --font-size-h2: 20px;
     --font-size-h3: 18px;
+    --font-size-number: 80px;
   }
 }

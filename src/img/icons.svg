@@ -10,4 +10,31 @@
     <line y1="-0.5" x2="50" y2="-0.5" transform="matrix(0.707107 -0.707107 0.722764 0.691095 1.32239 36.5)" stroke="#271100"/>
     <line y1="-0.5" x2="50" y2="-0.5" transform="matrix(0.707107 0.707107 -0.722764 0.691095 1.32239 1.5)" stroke="#271100"/>
   </svg>
+  <svg id='speed' viewBox="0 0 60 60" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M36.9992 25L37.9992 27L39.9991 28C34.1961 40.2681 28 45.5 22.9992 41.5C18.4999 36.5 20.3434 32.2376 36.9992 25Z" stroke="#39A865" stroke-width="2.5"/>
+    <path d="M4.5 38.5L12 36.5" stroke="#39A865" stroke-width="2.5"/>
+    <path d="M56.3254 39.2196L48.9997 36.6535" stroke="#39A865" stroke-width="2.5"/>
+    <path d="M8.9996 15.2269L15.1798 19.9231" stroke="#39A865" stroke-width="2.5"/>
+    <path d="M49.8067 15.9993L43.8398 20.9638" stroke="#39A865" stroke-width="2.5"/>
+    <path d="M30.1154 6.00045L29.9192 13.7601" stroke="#39A865" stroke-width="2.5"/>
+    <path d="M12.5 52.5C9.5 50 3 44 3 31C3 18 14.9998 5 30 5C45.0002 5 57 18 57 31C57 44 51 49 47.5 52.5" stroke="#39A865" stroke-width="2.5"/>
+  </svg>
+  <svg id='speed_blue' viewBox="0 0 40 41" fill="none">
+    <path d="M24.6664 17.167L25.3331 18.5003L26.6664 19.167C22.7977 27.3457 18.667 30.8337 15.3331 28.167C12.3335 24.8337 13.5626 21.992 24.6664 17.167Z" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M3 26.1663L8 24.833" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M37.5503 26.6467L32.6665 24.936" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M5.99973 10.6509L10.1199 13.7818" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M33.2044 11.1659L29.2265 14.4756" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M20.0769 4.49998L19.9461 9.67305" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M8.33333 35.4997C6.33333 33.833 2 29.833 2 21.1663C2 12.4997 9.99986 3.83301 20 3.83301C30.0001 3.83301 38 12.4997 38 21.1663C38 29.833 34 33.1663 31.6667 35.4997" stroke="#689BD8" stroke-width="2.5"/>
+  </svg>
+  <svg id='person' viewBox="0 0 40 41" fill="none">
+    <path d="M28.0833 12.833C28.0833 17.0708 24.5075 20.583 20 20.583C15.4924 20.583 11.9166 17.0708 11.9166 12.833C11.9166 8.59526 15.4924 5.08301 20 5.08301C24.5075 5.08301 28.0833 8.59526 28.0833 12.833Z" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M4 31.8327V37.1663H36V31.8327C29.6 23.8331 9.94286 23.8329 4 31.8327Z" stroke="#689BD8" stroke-width="2.5"/>
+  </svg>
+  <svg id='plus' viewBox="0 0 48 48" fill="none">
+    <path d="M14 24H34" stroke="#271100" stroke-width="2" stroke-linecap="round"/>
+    <path d="M24 14V34" stroke="#271100" stroke-width="2" stroke-linecap="round"/>
+  </svg>
 </svg>

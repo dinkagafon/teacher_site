@@ -1,5 +1,11 @@
+{% if direct %}
+  {% set background = "--color-"+ direct +"-back" %}
+{% else %}
+  {% set background = "--color-main-back" %}
+{% endif %}
+
 <section class="request">
-  <form action="mailto:nikitagafon@yandex.ru" enctype="text/plain" class="request__form form">
+  <form action="mailto:nikitagafon@yandex.ru" enctype="text/plain" class="request__form form" style='color: var({{ background }})'>
     <label for="parent"  class="form__title">Имя родителя</label>
     <input type="text" name="parent" id="parent" placeholder="Анастасия Андреевна" required>
 

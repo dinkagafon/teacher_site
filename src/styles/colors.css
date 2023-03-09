@@ -1,6 +1,7 @@
 :root {
   --color-main-back: #cfe5ff;
   --color-text-primary: #271100;
+  --color-media-background: #000000;
   --color-text-secondary: #676666;
   --color-main-accent-contrast: #0e6ee0;
   --color-main-accent-noncontrast: rgba(207, 229, 255, 0.3);

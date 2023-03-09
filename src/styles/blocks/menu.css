@@ -29,6 +29,7 @@
 .menu__item {
   font-family: var(--font-family-header);
   font-size: var(--font-size-h1);
+  padding: 8px 0;
 }
 
 .menu__link {

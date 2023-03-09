@@ -1,3 +1,9 @@
+{% if direct %}
+  {% set background = "--color-"+ direct +"-back" %}
+{% else %}
+  {% set background = "--color-main-back" %}
+{% endif %}
+
 <!DOCTYPE html>
 <html class="page" lang="en">
   <head>
@@ -18,7 +24,8 @@
     {% include 'header.njk' %}
     <main>
       {{ content | safe }}
+      {% include 'faq.njk' %}
     </main>
-    {# {% include 'footer.njk' %} #}
+    {% include 'footer.njk' %}
   </body>
 </html>
