@@ -13,7 +13,7 @@
               <button class="comment__show-more-button comment__show-more-button_hidden" tabindex="{{ 0 if loop.index0 === 0 else -1}}">Показать больше</button>
               <div class="comment__direction-container text_small" >
                 {% for direct in comment.directs %}
-                  {% for direction in collections.directions%}
+                  {% for direction in collections.directions %}
                     {% if direction.fileSlug === direct %}
                       <span class="comment__direction" style="background-color: {{ direction.data.colors.background }}">{{ direction.data.title }}</span>
                     {% endif %}

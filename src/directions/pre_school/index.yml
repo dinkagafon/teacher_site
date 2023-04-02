@@ -5,6 +5,7 @@ description: "Обучение основным предметам, направ
 background_image: background.png
 preview_image: preview.png
 age: дошкольники
+date: 2016-03-01
 dies:
   - дошкольники
   - занятие 55 минут

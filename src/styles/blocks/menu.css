@@ -40,10 +40,10 @@
   display: block;
   text-decoration: none;
   color: var(--color-text-primary);
+  transition: all 0.2s ease-in;
 }
 
 .menu__item {
-  transition: all 0.2s ease-in;
   width: max-content;
   padding: 8px 0;
 }
