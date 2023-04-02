@@ -79,10 +79,18 @@
   .prise__content {
     flex-direction: column;
     padding: 0 0;
-    gap: 32px;
+    gap: 24px;
   }
   .prise__list {
     margin: 0 auto;
     gap: 16px;
+  }
+  .prise__icon {
+    height: 32px;
+  }
+
+  .prise__icon svg {
+    height: 32px;
+    width: 32px;
   }
 }
