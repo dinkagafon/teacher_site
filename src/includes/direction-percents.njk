@@ -1,44 +1,16 @@
-<div class="direction-percents">
-  <div class="direction-percents__container">
-    <div class="direction-percents__block">
-      <div class="direction-percents__title">
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">на</span>
-        <span class="direction-percents__title-number" style="background-image: var(--color-{{ direct }}-linear);">14</span>
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">%</span>
-      </div>
-      <p class="direction-percents__discription">
-        повышение успеваемость в школе
-      </p>
-    </div>
-    <div class="direction-percents__block">
-      <div class="direction-percents__title">
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">на</span>
-        <span class="direction-percents__title-number" style="background-image: var(--color-{{ direct }}-linear);">14</span>
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">%</span>
-      </div>
-      <p class="direction-percents__discription">
-        повышение успеваемость в школе
-      </p>
-    </div>
-    <div class="direction-percents__block">
-      <div class="direction-percents__title">
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">на</span>
-        <span class="direction-percents__title-number" style="background-image: var(--color-{{ direct }}-linear);">14</span>
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">%</span>
-      </div>
-      <p class="direction-percents__discription">
-        повышение успеваемость в школе
-      </p>
-    </div>
-    <div class="direction-percents__block">
-      <div class="direction-percents__title">
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">на</span>
-        <span class="direction-percents__title-number" style="background-image: var(--color-{{ direct }}-linear);">14</span>
-        <span class="direction-percents__title-text" style="color: var(--color-{{ direct }}-accent-contrast);">%</span>
-      </div>
-      <p class="direction-percents__discription">
-        повышение успеваемость в школе
-      </p>
+<section class="section" id='statistics'>
+  <h2 class="section__header text_h2">{{ section.header }}</h2>
+  <div class="section__content">
+    <div class="direction-percents__container">
+      {% from 'macros/benefit.njk' import benefit %}
+      {% for point in section.list %}
+        {{ benefit(
+					percent=point.percent,
+          text=point.text,
+          color=colors.accent_contrast,
+          gradient=colors.gradient
+				) }}
+      {% endfor %}
     </div>
   </div>
-</div>
+</section>

@@ -1,28 +1,29 @@
-<section class="experience">
-  <h2 class="experience__header">
-    2 города, высшее образование, повышение квалификации
-    и различные курсы за 25 лет работы учителем
-  </h2>
-  <div class="experience__slider swiper" role="region" aria-label="Отзывы" tabindex="0">
-    <ul class="experience__slider-container swiper-wrapper" >
-      {% for stage in stages %}
-        <li class="experience__slider-elem swiper-slide">
-          <div class="stage">
-
-            <div class="stage__content">
-              <h3 class="stage__title">{{- stage.title -}}</h3>
-              <div class="stage__discrip-wrapper">
-                <p class="stage__discrip">
-                  {{- stage.discrip -}}
-                </p>
+<section class="section experience" id='experience'>
+  <h2 class="section__header text_h1">2 города, высшее образование, повышение квалификации
+    и различные курсы за 25 лет работы учителем</h2>
+  <div class="section__content section__content_full-width">
+    <div class="experience__slider swiper" role="region" aria-label="Отзывы" tabindex="0">
+      <ul class="experience__slider-container swiper-wrapper" >
+        {% for stage in stages %}
+          <li class="experience__slider-elem swiper-slide">
+            <div class="section__content">
+              <div class="stage">
+                <div class="stage__content">
+                  <h3 class="stage__title text_h3">{{- stage.title -}}</h3>
+                  <div class="stage__discrip-wrapper">
+                    <p class="stage__discrip text_main">
+                      {{- stage.discrip -}}
+                    </p>
+                  </div>
+                </div>
+                <div class="stage__year text_small">{{ stage.year | safe }}
+                </div>
               </div>
             </div>
-            <div class="stage__year">{{ stage.year | safe }}
-            </div>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
-    <div class="experience__slider-pagination swiper-pagination"></div>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="experience__slider-pagination swiper-pagination"></div>
+    </div>
   </div>
 </section>

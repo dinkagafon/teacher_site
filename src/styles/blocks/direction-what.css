@@ -1,5 +1,10 @@
 .direction-what {
-  padding: 37px 0;
+  padding-top: 26px;
+  padding-bottom: 52px;
+}
+
+.direction-what__title {
+  color: var(--color-text-primary);
 }
 
 .direction-what__container {
@@ -25,12 +30,7 @@
   align-items: center;
 }
 
-.direction-what__title {
-  font-size: var(--font-size-h3);
-}
-
 .direction-what__text {
-  font-size: var(--font-size-text-main);
 }
 
 @media (min-width: 1536px) {
@@ -71,5 +71,8 @@
 @media (max-width: 639px) {
   .direction-what__container {
     grid-template-columns: 1fr;
+  }
+  .direction-what__header br {
+    display: none;
   }
 }

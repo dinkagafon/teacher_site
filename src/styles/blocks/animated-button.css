@@ -1,0 +1,91 @@
+.animated-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  border-radius: 200px;
+  padding: 1em 2em;
+  display: inline-block;
+  color: var(--color-text-primary);
+  background-color: var(--color-white-75);
+}
+
+.animated-button_small {
+  padding: 1em 1.5em;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.animated-button__text {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 5;
+  top: -1px;
+}
+
+.animated-button__text span {
+  color: var(--color-text-primary);
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform-origin: 0% 0%;
+  transform: translate(0px, 0px);
+  display: block;
+}
+
+.animated-button__text span::after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  pointer-events: none;
+  -webkit-transform: skewY(3deg);
+  transform: skewY(3deg);
+}
+
+.animated-button__ripple {
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.animated-button__ripple span {
+  background-color: var(--color-text-primary);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  transform: translate(0%, 101%);
+  transition: all 0.5s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .animated-button:hover .animated-button__text span {
+    color: var(--white);
+    transform: translate(0%, -140%) skew(0deg, -3deg);
+    transition: all 0.5s ease;
+    display: block;
+  }
+
+  .animated-button:hover .animated-button__ripple span {
+    animation: circle-to-square 0.5s ease;
+    transform: translate(0%, 0%);
+    border-radius: 0%;
+  }
+}
+
+/* df */
+@media (max-width: 639px) {
+  .animated-button {
+    width: 100%;
+  }
+}

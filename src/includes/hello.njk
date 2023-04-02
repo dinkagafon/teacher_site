@@ -4,9 +4,9 @@
       <picture class="hello__img">
         <img src="/img/photos/pic_main_page.png" alt="Фотография Юлии">
       </picture>
-      <div class="hello__work-time die">25 лет стаж работы</div>
-      <div class="hello__online die">онлайн обучение</div>
-      <a href="tel: +79153556431" class="hello__phone">
+      <div class="hello__work-time die text_small">25 лет стаж работы</div>
+      <div class="hello__online die text_small">онлайн обучение</div>
+      <a href="tel: +79153556431" class="hello__phone text_small">
         <div class="die">+7 (915) 355 - 64 - 31</div>
       </a>
     </div>
@@ -14,25 +14,24 @@
   </div>
 
   <div class="hello__content">
-    <h1 class="hello__h1">
+    <h1 class="hello__h1 text_h1">
     Здравствуйте, меня зовут
     <span class="highlight">Юлия</span>,<br>
     и я могу стать вашим
     <span class="highlight">репетитором</span>
     </h1>
-    <p class="hello__discription">
+    <p class="hello__discription text_main">
     Занимаюсь с&nbsp;детьми от&nbsp;4&nbsp;до&nbsp;12&nbsp;лет по&nbsp;различным
     направлениям. <span class="hello__mobile-hidden"> Для&nbsp;изучения нового не&nbsp;придется даже
     выходить из&nbsp;дома -&nbsp;занятия проходят в&nbsp;онлайн&nbsp;формате </span>
     </p>
-    <a href="/" class="hello__button button button_connect">
-      <span class="button__ripple">
-        <span></span>
-      </span>
-      <span class="button__text">
-        <span data-text="Связаться">Связаться</span>
-      </span>
+    {% from 'macros/animated-button.njk' import animatedButton %}
+    <a href='#form' class="hello__link">
+      {{ animatedButton(
+        text='Связаться'
+      ) }}
     </a>
+
   </div>
 
 </section>

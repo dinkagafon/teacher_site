@@ -10,6 +10,10 @@ module.exports = function (eleventyConfig) {
     return yaml.load(contents);
   });
 
+  eleventyConfig.addCollection("directions", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/directions/*/index.njk");
+  });
+
   eleventyConfig.addTemplateFormats("css");
 
   eleventyConfig.addExtension("css", {
@@ -29,9 +33,12 @@ module.exports = function (eleventyConfig) {
     },
   });
 
-  ["src/img", "src/fonts"].forEach((path) =>
-    eleventyConfig.addPassthroughCopy(path)
-  );
+  [
+    "src/robots.txt",
+    "src/img",
+    "src/fonts",
+    "src/directions/**/*.!(yml|njk)",
+  ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
 
   eleventyConfig.addTemplateFormats("js");
 
@@ -67,6 +74,6 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    templateFormats: ["md", "njk"],
+    templateFormats: ["njk"],
   };
 };

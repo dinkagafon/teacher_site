@@ -1,16 +1,18 @@
-<div class="direction-starter"
-  style='background-color: var(--color-{{ direct }}-back); background-image: url(/img/directions_background/{{ direct }}_background.png)'
->
+<div class="direction-starter">
+  <div class="direction-starter__fon" style='background-image: url({{ page.url }}/{{ background_image }}); background-color: {{ colors.background }}'></div>
   <div class="direction_starter__container">
-    <h1 class="direction-starter__header">{{ directions[direct].name }}</h1>
-    <p class="direction-starter__discrip">{{ directions[direct].discription }}</p>
-    <button class="direction-starter__button button button_connect">
-      <span class="button__ripple">
-        <span></span>
-      </span>
-      <span class="button__text">
-        <span data-text="Связаться">Связаться</span>
-      </span>
-    </button>
+    <h1 class="direction-starter__header text_h1">{{ full_title }}</h1>
+    <p class="direction-starter__discrip text_main">{{ description }}</p>
+    <div class="direction-starter__die-wrapper">
+      {% for die in dies %}
+        <div class="direction-starter__die die text_small" style=' background-color: {{ colors.accent }}'>{{ die }}</div>
+      {% endfor %}
+    </div>
+    {% from 'macros/animated-button.njk' import animatedButton %}
+    <a href='#form' class="direction-starter__button">
+      {{ animatedButton(
+        text='Связаться'
+      ) }}
+    </a>
   </div>
 </div>

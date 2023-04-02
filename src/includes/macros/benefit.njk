@@ -1,0 +1,12 @@
+{% macro benefit(percent, text, color, gradient) %}
+  <div class="benefit">
+    <div class="benefit__title">
+      <span class="benefit__title-text text_big" style="color: {{ color }};">на</span>
+      <span class="benefit__title-number text_number" style="background-image: {{ gradient }};">{{ percent }}</span>
+      <span class="benefit__title-text text_big" style="color: {{ color }}">%</span>
+    </div>
+    <p class="benefit__discription text_big">
+      {{ text | striptags(true) | escape | nl2br }}
+    </p>
+  </div>
+{% endmacro %}

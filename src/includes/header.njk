@@ -1,37 +1,57 @@
-<div class="menu">
-  <button class="menu__close-button button">
-    <svg aria-hidden="true" focusable="false" width="42" height="42">
-      <use href="/img/icons.svg#close"/>
-    </svg>
-  </button>
-  <nav>
-    <ul class="menu__list">
-      {% for name, params in directions %}
-        <li class="menu__item">
-          <a class="menu__link" href="/directions/{{ name }}">
-            {{- params.name -}}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</div>
-<header class="header container" style='background-color: var({{ background }})'>
-  <button class="header__menu-button button">
-    <span>M</span>
-    <span>E</span>
-    <span>N</span>
-    <span>U</span>
-  </button>
-  <div class="anchors">
-    <ul class="anchors__list">
-      {% for item in anchors %}
-        <li class="anchors__item">
+<header class="header container" style='background-color: {{ "var(--color-main-back)" if page.url === "/" }}'>
+  <div class="header__container">
+    <a href="/" class="header__logo">
+      <div class="logo text_h3">
+        <span class="logo__name">Юлия</span>
+        <span class="logo__surname">М.</span>
+      </div>
+    </a>
+    <div class="anchors text_small">
+      <ul class="anchors__list" style="--hover-color: {{ 'var(--color-main-accent-contrast) 'if page.url === '/' else colors.accent_contrast}}">
+        {% if page.url === '/' %}
+          {% set anchors = anchors_main %}
+        {% else %}
+          {% set anchors = anchors_directions %}
+        {% endif %}
+        {% for item in anchors %}
           <a class="anchors__link" href="{{ item.href }}">
-            {{- item.title -}}
+            <li class="anchors__item">
+              {{- item.title -}}
+            </li>
           </a>
-        </li>
-      {% endfor %}
-    </ul>
+        {% endfor %}
+      </ul>
+    </div>
+    <button class="header__menu-button text_small">
+      <span>М</span>
+      <span>Е</span>
+      <span>Н</span>
+      <span>Ю</span>
+    </button>
   </div>
 </header>
+<div class="menu">
+  <div class="menu__container container">
+    <button class="menu__close-button" tabindex='-1'>
+      <svg aria-hidden="true" focusable="false" width="42" height="42">
+        <use href="/img/icons.svg#close"/>
+      </svg>
+    </button>
+    <nav>
+      <ul class="menu__list text_h1">
+        <li class="menu__item" >
+          <a class="menu__link" href="/" tabindex='-1' style="color: {{ 'var(--main-accent)' if page.url === '/' }}">
+            Обо мне
+          </a>
+        </li>
+        {% for direction in collections.directions %}
+          <li class="menu__item" >
+            <a class="menu__link" href="{{ direction.url }}" tabindex='-1' style="color: {{ direction.data.colors.accent_contrast if page.url === direction.url  }}">
+              {{- direction.data.title -}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,7 +1,7 @@
-{% if direct %}
-  {% set background = "--color-"+ direct +"-back" %}
+{% if colors.background %}
+  {% set background = colors.background %}
 {% else %}
-  {% set background = "--color-main-back" %}
+  {% set background = '#cfe5ff' %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -17,10 +17,10 @@
     <link rel="icon" href="/img/logo/favicon.ico" sizes="any">
 
     <meta name="description" content="{{ desc }}">
-
+    <meta name="theme-color" content="{{ background }}">
     <script defer src="/scripts/index.js"></script>
   </head>
-  <body>
+  <body style='outline-color: {{ colors.contrast }});'>
     {% include 'header.njk' %}
     <main>
       {{ content | safe }}

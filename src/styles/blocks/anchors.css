@@ -2,17 +2,20 @@
   display: flex;
   list-style: none;
   gap: 40px;
-  font-size: var(--font-size-text-medium);
   margin: 0;
   padding: 0;
 }
 .anchors__link {
   text-decoration: none;
   color: var(--color-text-primary);
+  transition: all 0.2s ease-in;
+}
+.anchors__link:hover {
+  transform: translateY(-4px);
 }
 
 /* df */
-@media (max-width: 639px) {
+@media (max-width: 1023px) {
   .anchors {
     display: none;
   }

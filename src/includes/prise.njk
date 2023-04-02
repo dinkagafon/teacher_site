@@ -1,43 +1,39 @@
-{% if direct %}
-  {% set color = "--color-"+ direct +"-linear" %}
-{% else %}
-  {% set color = "--color-main-accent-contrast" %}
-{% endif %}
-
-<section class="prise container">
-  <h2 class="prise__title">одна цена на все виды занятий</h2>
-  <div class="prise__content">
-    <div class="prise__left">
-      <span class="prise__sum" style="color: var({{ color }});">1 750</span>
-      <p class="prise__discrip">рублей за 55 минут</p>
-    </div>
-    <div class="prise__right">
-      <ul class="prise__list">
-        <li class="prise__item">
-          <div class="prise__icon">
-            <svg aria-hidden="true" focusable="false" width="40" height="40">
-              <use href="/img/icons.svg#person"/>
-            </svg>
-          </div>
-          <span class="prise__text">индивидуальное занятие</span>
-        </li>
-        <li class="prise__item">
-          <div class="prise__icon">
-            <svg aria-hidden="true" focusable="false" width="40" height="40">
-              <use href="/img/icons.svg#speed_blue"/>
-            </svg>
-          </div>
-          <span class="prise__text">занятие длится 50 минут</span>
-        </li>
-        <li class="prise__item">
-          <div class="prise__icon">
-            <svg aria-hidden="true" focusable="false" width="40" height="40">
-              <use href="/img/icons.svg#speed_blue"/>
-            </svg>
-          </div>
-          <span class="prise__text">развлекательная часть 5 минут</span>
-        </li>
-      </ul>
+<section class="section">
+  <h2 class="section__header text_h2">одна цена на все виды занятий</h2>
+  <div class="section__content">
+    <div class="prise__content">
+      <div class="prise__left">
+        <span class="prise__sum text_number" style="background-image: {{ 'var(--color-main-linear)' if page.url === '/' else colors.gradient }};">1 750</span>
+        <p class="prise__discrip text_big">рублей за 55 минут</p>
+      </div>
+      <div class="prise__right text_big">
+        <ul class="prise__list">
+          <li class="prise__item">
+            <div class="prise__icon">
+              <svg aria-hidden="true" focusable="false" width="40" height="40" style="color: {{ 'var(--main-accent)' if page.url === '/' else colors.accent_contrast }}">
+                <use href="/img/icons.svg#person"/>
+              </svg>
+            </div>
+            <span class="prise__text">индивидуальное занятие</span>
+          </li>
+          <li class="prise__item">
+            <div class="prise__icon">
+              <svg aria-hidden="true" focusable="false" width="40" height="40" style="stroke: {{ 'var(--main-accent)' if page.url === '/' else colors.accent_contrast }}">
+                <use href="/img/icons.svg#speed_blue"/>
+              </svg>
+            </div>
+            <span class="prise__text">занятие длится 50 минут</span>
+          </li>
+          <li class="prise__item">
+            <div class="prise__icon">
+              <svg aria-hidden="true" focusable="false" width="40" height="40" style="stroke: {{ 'var(--main-accent)' if page.url === '/' else colors.accent_contrast }}">
+                <use href="/img/icons.svg#speed_blue"/>
+              </svg>
+            </div>
+            <span class="prise__text">развлекательная часть 5 минут</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

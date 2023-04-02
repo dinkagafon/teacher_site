@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+
+{% include 'direction-starter.njk' %}
+{% for section in sections %}
+  {% if section.name === 'benefits' %}
+    {% include 'direction-why.njk' %}
+  {% elif section.name === 'statistics' %}
+    {% include 'direction-percents.njk' %}
+  {% elif section.name === 'what' %}
+    {% include 'direction-what.njk' %}
+  {% elif section.name === 'numbers' %}
+    {% include 'direction-numbers.njk' %}
+  {% endif %}
+{% endfor %}
+{% include 'prise.njk' %}
+{% include 'request.njk' %}

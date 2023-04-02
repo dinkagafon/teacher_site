@@ -4,3 +4,8 @@ import "./components/comments.js";
 import "./components/menu.js";
 import "./components/direction-content.js";
 import "./components/faq.js";
+import "./components/certificates.js";
+import "./components/video.js";
+import "./components/header.js";
+import "./components/form.js";
+document.body.scrollTop = 0;

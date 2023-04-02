@@ -8,13 +8,14 @@
           )
       ) / var(--grid-count)
   );
+  --container-width: 1320px;
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
   :root {
     --grid-margin: 72px;
-    --grid-gutter: 24px;
+    --grid-gutter: 40px;
     --grid-count: 12;
   }
 }
@@ -23,7 +24,7 @@
 @media (min-width: 1280px) and (max-width: 1535px) {
   :root {
     --grid-margin: 72px;
-    --grid-gutter: 16px;
+    --grid-gutter: 32px;
     --grid-count: 12;
   }
 }
@@ -32,7 +33,7 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
   :root {
     --grid-margin: 72px;
-    --grid-gutter: 16px;
+    --grid-gutter: 32px;
     --grid-count: 12;
   }
 }
@@ -50,7 +51,7 @@
 @media (min-width: 640px) and (max-width: 767px) {
   :root {
     --grid-margin: 20px;
-    --grid-gutter: 16px;
+    --grid-gutter: 24px;
     --grid-count: 6;
   }
 }

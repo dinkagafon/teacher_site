@@ -1,0 +1,38 @@
+<section class="section" id="certificates">
+  <h2 class="section__header text_h2">Дипломы, сертификаты, благодарственные письма</h2>
+  <div class="certificates__content section__content">
+    <div class="certificates__container">
+      {% for i in range(0, 18) -%}
+        <div class="certificates__item">
+          <img  src="/img/certificates/2{{ i+1 }}.jpg" alt="Сертификат {{ i+1 }}">
+        </div>
+      {%- endfor %}
+    </div>
+
+    <div class="certificates__container-mobile swiper">
+      <div class="certificates__container__wrapper-mobile swiper-wrapper slider__container">
+        {% for i in range(0, 18) -%}
+          <div class="certificates__item_mobile swiper-slide">
+            <img  src="/img/certificates/2{{ i+1 }}.jpg" alt="Сертификат {{ i+1 }}">
+          </div>
+        {%- endfor %}
+      </div>
+      <ul class="slider__controls certificates__controls">
+        <li>
+          <button id="previous" class="slider__button certificates__button-prev" aria-label="Предыдущий">
+            <svg aria-hidden="true" focusable="false" width="16" height="24">
+              <use href="/img/icons.svg#arrow-previous"/>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button id="next" class="slider__button certificates__button-next" aria-label="Следующий">
+            <svg aria-hidden="true" focusable="false" width="16" height="24">
+              <use href="/img/icons.svg#arrow-next"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

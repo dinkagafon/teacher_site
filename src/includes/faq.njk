@@ -1,70 +1,22 @@
-<section class="faq container">
-  <h2 class="faq__title">Вопросы и ответы</h2>
-  <div class="faq__content">
-    <div class="faq__block">
-      <div class="faq__question">
-        <h3>Сколько стоит занятие?</h3>
-        <div class="faq__icon">
-          <svg aria-hidden="true" focusable="false" width="48" height="48">
-            <use href="/img/icons.svg#plus"/>
-          </svg>
-        </div>
-      </div>
-      <div class="faq__answer">
-        <p class="faq__text">1 750 рублей за 55 минут.</p>
-      </div>
-    </div>
-    <div class="faq__block">
-      <div class="faq__question">
-        <h3>Сколько стоит занятие?</h3>
-        <div class="faq__icon">
-          <svg aria-hidden="true" focusable="false" width="48" height="48">
-            <use href="/img/icons.svg#plus"/>
-          </svg>
-        </div>
-      </div>
-      <div class="faq__answer">
-        <p class="faq__text">1 750 рублей за 55 минут.</p>
-      </div>
-    </div>
-    <div class="faq__block">
-      <div class="faq__question">
-        <h3>Сколько стоит занятие?</h3>
-        <div class="faq__icon">
-          <svg aria-hidden="true" focusable="false" width="48" height="48">
-            <use href="/img/icons.svg#plus"/>
-          </svg>
-        </div>
-      </div>
-      <div class="faq__answer">
-        <p class="faq__text">1 750 рублей за 55 минут.</p>
-      </div>
-    </div>
-    <div class="faq__block">
-      <div class="faq__question">
-        <h3>Сколько стоит занятие?</h3>
-        <div class="faq__icon">
-          <svg aria-hidden="true" focusable="false" width="48" height="48">
-            <use href="/img/icons.svg#plus"/>
-          </svg>
-        </div>
-      </div>
-      <div class="faq__answer">
-        <p class="faq__text">1 750 рублей за 55 минут.</p>
-      </div>
-    </div>
-    <div class="faq__block">
-      <div class="faq__question">
-        <h3>Сколько стоит занятие?</h3>
-        <div class="faq__icon">
-          <svg aria-hidden="true" focusable="false" width="48" height="48">
-            <use href="/img/icons.svg#plus"/>
-          </svg>
-        </div>
-      </div>
-      <div class="faq__answer">
-        <p class="faq__text">1 750 рублей за 55 минут.</p>
-      </div>
+{% if page.url === '/' %}
+  {% set faq_list = faq %}
+{% else %}
+  {% set faq_list = faq_block %}
+{% endif %}
+
+<section class="section" id="faq">
+  <h2 class="section__header text_h2">Вопросы и ответы</h2>
+  <div class="section__content">
+    <div class="faq__content">
+      {% from 'macros/faq-block.njk' import faqBlock %}
+      {% for item in faq_list %}
+        {{ faqBlock(
+					question=item.q,
+          answer=item.a,
+          lineColor=colors.accent,
+          iconColor=colors.background
+				) }}
+      {% endfor %}
     </div>
   </div>
 </section>

@@ -51,12 +51,9 @@
 .hello__h1 {
   margin: 0;
   color: var(--color-text-primary);
-  font-size: var(--font-size-h1);
-  font-weight: 400;
 }
 
 .hello__discription {
-  font-size: var(--font-size-text-main);
 }
 
 .hello__work-time {
@@ -83,6 +80,26 @@
   animation-delay: 0.2s;
 }
 
+.hello__phone:focus {
+  outline: none;
+}
+
+.hello__phone:focus-visible > * {
+  outline-offset: 2px;
+  outline-style: auto;
+  outline-color: var(--color-main-accent-contrast);
+}
+
+.hello__link:focus-visible {
+  outline: none;
+}
+
+.hello__link:focus-visible > * {
+  outline-offset: 2px;
+  outline-style: auto;
+  outline-color: var(--color-main-accent-contrast);
+}
+
 @keyframes float {
   0% {
     transform: translate(0, 0);
@@ -103,8 +120,8 @@
   .hello__h1 {
     margin-bottom: 16px;
   }
-  .hello__button {
-    margin-top: 32px;
+  .hello__discription {
+    margin-bottom: 32px;
   }
   .hello__content {
     align-items: flex-end;
@@ -120,8 +137,8 @@
   .hello__h1 {
     margin-bottom: 16px;
   }
-  .hello__button {
-    margin-top: 32px;
+  .hello__discription {
+    margin-bottom: 32px;
   }
   .hello__content {
     align-items: flex-end;
@@ -137,8 +154,8 @@
   .hello__h1 {
     margin-bottom: 8px;
   }
-  .hello__button {
-    margin-top: 24px;
+  .hello__discription {
+    margin-bottom: 24px;
   }
   .hello__content {
     align-items: flex-end;
@@ -154,8 +171,8 @@
   .hello__h1 {
     margin-bottom: 8px;
   }
-  .hello__button {
-    margin-top: 24px;
+  .hello__discription {
+    margin-bottom: 24px;
   }
   .hello__content {
     align-items: center;
@@ -171,8 +188,8 @@
   .hello__h1 {
     margin-bottom: 8px;
   }
-  .hello__button {
-    margin-top: 24px;
+  .hello__discription {
+    margin-bottom: 24px;
   }
   .hello__content {
     align-items: center;
@@ -188,8 +205,8 @@
   .hello__h1 {
     margin-bottom: 8px;
   }
-  .hello__button {
-    margin-top: 16px;
+  .hello__discription {
+    margin-bottom: 24px;
   }
   .hello__mobile-hidden {
     display: none;
@@ -215,5 +232,8 @@
   .hello__phone {
     bottom: 5%;
     right: -13%;
+  }
+  .hello__link {
+    width: 100%;
   }
 }

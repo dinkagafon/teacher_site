@@ -2,23 +2,18 @@ import LocomotiveScroll from "locomotive-scroll";
 const directionContents = document.querySelectorAll(".directions__content");
 const directionContainer = document.querySelector(".directions");
 const directionWrappers = document.querySelectorAll(".directions__wrapper");
-const directionImages = Array.from(directionWrappers).reduce(
-  (result, wrapper) => {
-    const nameDirection = wrapper.dataset.title;
-    result[nameDirection] = document.querySelector(
-      `[data-direction=${nameDirection}]`
-    );
-    return result;
-  },
-  {}
-);
+const directionImages = Array.from(directionWrappers).map((wrapper) => [
+  wrapper.dataset.title,
+  document.querySelector(`[data-direction=${wrapper.dataset.title}]`),
+]);
 const options = {
   threshold: 0.5,
 };
 const callback = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      directionContainer.style.backgroundColor = `var(--color-${entry.target.parentElement.dataset.title}-back)`;
+      directionContainer.style.backgroundColor =
+        entry.target.parentElement.dataset.background;
     }
   });
 };
@@ -34,21 +29,19 @@ const options2 = {
 };
 
 let visibleDirectionWrapper = null;
-let visibleDirectionImage = null;
 
-const image = document.querySelector(".directions__image");
 document.addEventListener("scroll", () => {
   if (visibleDirectionWrapper) {
     const hiddenPercent =
       (-visibleDirectionWrapper.getBoundingClientRect().top /
         visibleDirectionWrapper.offsetHeight) *
       100;
-    directionImages[
-      visibleDirectionWrapper.dataset.title
-    ].style.clipPath = `inset(0px 0px ${hiddenPercent}%)`;
+    directionImages.find(
+      (image) => image[0] === visibleDirectionWrapper.dataset.title
+    )[1].style.clipPath = `inset(0px 0px ${hiddenPercent}%)`;
   }
 });
-
+let flag = false;
 const callback2 = function (entries) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting && !entry.target.previousElementSibling) {
@@ -60,6 +53,24 @@ const callback2 = function (entries) {
         return;
       }
       visibleDirectionWrapper = entry.target;
+      if (!flag) {
+        flag = true;
+        if (visibleDirectionWrapper) {
+          const hiddenPercent =
+            (-visibleDirectionWrapper.getBoundingClientRect().top /
+              visibleDirectionWrapper.offsetHeight) *
+            100;
+
+          for (let image of directionImages) {
+            if (image[0] !== visibleDirectionWrapper.dataset.title) {
+              image[1].style.clipPath = `inset(0px 0px 100%)`;
+            } else {
+              image[1].style.clipPath = `inset(0px 0px ${hiddenPercent}%)`;
+              break;
+            }
+          }
+        }
+      }
     }
   });
 };

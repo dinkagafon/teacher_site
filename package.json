@@ -22,7 +22,11 @@
     "not dead"
   ],
   "dependencies": {
+    "imask": "^6.4.3",
+    "inputmask": "^5.0.8",
+    "intl-tel-input": "^17.0.21",
     "locomotive-scroll": "^4.1.4",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "viewerjs": "^1.11.3"
   }
 }

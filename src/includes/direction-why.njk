@@ -1,42 +1,31 @@
-<div class="direction-why">
-  <div class="direction-why__video-container">
-    <div class="direction-why__video">
-      <video
-      muted
-      loop
-      playsinline
-      preload="auto"
-      autoplay
-      src="https://www.apple.com/105/media/us/apple-music/2021/7a99fc54-5af3-4513-8343-4c67c10b9f65/anim/value-props/medium.mp4#t=7.53453"></video>
-      <div class="direction-why__scrim"></div>
+<section class="section direction-why__section" id="benefit" >
+  <h2 class="section__header direction-why___header text_h2">{{ section.header }}</h2>
+  <div class="direction-why__static-content">
+    <div class="section__content direction-why__video-container">
+      <div class="direction-why__video">
+        <video
+          muted
+          loop
+          playsinline
+          preload="none"
+          autoplay
+          src="{{ page.url }}/{{ section.video }}"
+          ></video>
+        <div class="direction-why__scrim"></div>
+      </div>
     </div>
   </div>
-  <div class="direction-why__content">
-    <ul class="direction-why__list">
-      <li class="direction-why__text">
-        Все в игровой форме,
-        никакого стресса
-      </li>
-      <li class="direction-why__text">
-        Все в игровой форме,
-        никакого стресса
-      </li>
-      <li class="direction-why__text">
-        Все в игровой форме,
-        никакого стресса
-      </li>
-      <li class="direction-why__text">
-        Все в игровой форме,
-        никакого стресса
-      </li>
-      <li class="direction-why__text">
-        Все в игровой форме,
-        никакого стресса
-      </li>
-      <li class="direction-why__text">
-        Все в игровой форме,
-        никакого стресса
-      </li>
-    </ul>
+  <div class="section__content direction-why__wrapper">
+    <div class="direction-why__content">
+      <ul class="direction-why__list">
+        {% for point in section.list %}
+          <li class="direction-why__text text_benefit">
+            {{ point }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
   </div>
-</div>
+
+</section>

@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Keyboard } from "swiper";
 
 const comments = document.querySelectorAll(".slider__elem");
 
@@ -11,12 +11,29 @@ const swiper = new Swiper(".slider", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  modules: [Navigation],
+  keyboard: {
+    enabled: true,
+  },
+  modules: [Navigation, Keyboard],
   on: {
     activeIndexChange: (swiper) => {
       const comment__text =
         comments[swiper.previousIndex].querySelector(".comment__text");
-      console.log(comment__text);
+      const currentShowMoreButton = comments[swiper.activeIndex].querySelector(
+        ".comment__show-more-button"
+      );
+      const prevShowMoreButton = comments[swiper.previousIndex].querySelector(
+        ".comment__show-more-button"
+      );
+
+      if (currentShowMoreButton) {
+        currentShowMoreButton.setAttribute("tabIndex", "0");
+      }
+
+      if (prevShowMoreButton) {
+        prevShowMoreButton.setAttribute("tabIndex", "-1");
+      }
+
       if (comment__text.classList.contains("comment__text_show")) {
         comment__text.classList.remove("comment__text_show");
         comment__text.nextElementSibling.textContent = "Показать больше";
@@ -35,7 +52,10 @@ const swiper2 = new Swiper(".experience__slider", {
   centeredSlides: !mediaQuery.matches,
   slidesPerView: "auto",
   grabCursor: true,
-  initialSlide: 2,
+  initialSlide: 0,
+  keyboard: {
+    enabled: true,
+  },
   pagination: {
     el: ".experience__slider-pagination",
     clickable: true,
@@ -43,11 +63,37 @@ const swiper2 = new Swiper(".experience__slider", {
       return `<span class="${className} experience__slider-bullet"></span>`;
     },
   },
-  modules: [Pagination],
+  modules: [Pagination, Keyboard],
   on: {
+    init: () => {
+      expirienceStages[0].classList.add("stage_active");
+      const height =
+        expirienceStages[0].querySelector(".stage__discrip").offsetHeight;
+      expirienceStages[0].querySelector(
+        ".stage__discrip-wrapper"
+      ).style.height = height + "px";
+      expirienceStages[0]
+        .querySelector(".stage__year")
+        .classList.add("text_main");
+      expirienceStages[0]
+        .querySelector(".stage__year")
+        .classList.remove("text_small");
+    },
     activeIndexChange: (swiper) => {
       expirienceStages[swiper.previousIndex].classList.remove("stage_active");
       expirienceStages[swiper.activeIndex].classList.add("stage_active");
+      expirienceStages[swiper.previousIndex]
+        .querySelector(".stage__year")
+        .classList.add("text_small");
+      expirienceStages[swiper.previousIndex]
+        .querySelector(".stage__year")
+        .classList.remove("text_main");
+      expirienceStages[swiper.activeIndex]
+        .querySelector(".stage__year")
+        .classList.add("text_main");
+      expirienceStages[swiper.activeIndex]
+        .querySelector(".stage__year")
+        .classList.remove("text_small");
       expirienceStages[swiper.previousIndex].querySelector(
         ".stage__discrip-wrapper"
       ).style.height = 0;
@@ -55,7 +101,6 @@ const swiper2 = new Swiper(".experience__slider", {
         expirienceStages[swiper.activeIndex].querySelector(
           ".stage__discrip"
         ).offsetHeight;
-      console.log(height);
       expirienceStages[swiper.activeIndex].querySelector(
         ".stage__discrip-wrapper"
       ).style.height = height + "px";
@@ -68,3 +113,20 @@ for (let stageIndex = 0; stageIndex < expirienceStages.length; stageIndex++) {
     swiper2.slideTo(stageIndex);
   };
 }
+
+const swiper3 = new Swiper(".certificates__container-mobile", {
+  grabCursor: true,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  breakpoints: {
+    639: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
+  modules: [Navigation],
+  navigation: {
+    nextEl: ".certificates__button-next",
+    prevEl: ".certificates__button-prev",
+  },
+});

@@ -1,36 +1,16 @@
-.request {
-  padding-top: 180px;
-  padding-bottom: 180px;
-}
-
-.form {
+.form__content {
   display: grid;
   grid-template-columns: max-content auto;
   column-gap: 16px;
   row-gap: 24px;
   width: fit-content;
-  margin: 0 auto;
-  padding-left: 72px;
-  position: relative;
-  margin-top: 52px;
 }
 
-.form::before {
-  content: "";
-  position: absolute;
-  aspect-ratio: 1;
-  height: calc(100% + 360px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: currentColor;
-  border-radius: 900px;
-  z-index: -1;
+.form_hidden {
+  display: none;
 }
 
 .form__title {
-  font-size: var(--font-size-text-main);
-  justify-self: end;
   color: var(--color-text-primary);
   align-self: center;
 }
@@ -44,35 +24,68 @@
 .form input[type="phone"] {
   border: none;
   border-bottom: 1px solid var(--color-text-secondary);
-  font-size: var(--font-size-text-main);
   padding: 8px 16px;
   width: min(300px, 100%);
   background-color: transparent;
-  font-family: var(--font-family-text);
+}
+
+.form input.form__input_error {
+  border-bottom: 1px solid var(--color-error);
+}
+
+.form__submit-block {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.form__error-mes {
+  color: var(--color-error);
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent;
 }
 
 .form input[type="text"]::placeholder,
 .form input[type="phone"]::placeholder {
   color: var(--color-text-secondary);
-  font-size: var(--font-size-text-small);
+}
+
+.form input[type="text"]:focus,
+.form input[type="phone"]:focus {
+  outline: none;
+  border-bottom: 1px solid var(--color-main-accent-contrast);
 }
 
 .form__checkbox {
   color: var(--color-text-primary);
-  font-size: var(--font-size-text-small);
-  border: 1px solid var(--color-text-secondary);
-  border-radius: 20px;
-  padding: 8px 16px;
+
+  border: 1.5px solid var(--color-text-secondary);
+  border-radius: 40px;
+  padding: 8px 16px 10px;
   display: inline-block;
   cursor: pointer;
   margin-right: 8px;
   margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.form__checkbox:hover {
+  border-color: var(--color-text-primary);
 }
 
 .form__checkbox-container input[type="checkbox"]:checked + label {
-  border-color: var(--main-accent);
-  color: var(--white);
-  background-color: var(--main-accent);
+  border-color: var(--color-checked);
+  background-color: var(--color-checked);
+  color: var(--color-text-primary);
+}
+
+.form__checkbox-container input[type="checkbox"]:focus-visible + label {
+  outline-offset: 2px;
+  outline-style: auto;
+  outline-color: var(--color-main-accent-contrast);
 }
 
 .form__checkbox-new-row {
@@ -80,25 +93,29 @@
 }
 
 .form__checkbox-container input {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .form__submit {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  margin-top: 16px;
-  justify-self: center;
-  margin-left: -72px;
+  border: none;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+.form__submit:focus-visible {
+  outline: none;
+}
+
+.form__submit:focus-visible > * {
+  outline-offset: 2px;
+  outline-style: auto;
+  outline-color: var(--color-main-accent-contrast);
 }
 
 /* df */
 @media (max-width: 639px) {
-  .request {
-    padding-inline: 20px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .form {
+  .form__content {
     display: flex;
     flex-direction: column;
     row-gap: 0;
@@ -127,5 +144,16 @@
   }
   .form__submit {
     margin-left: 0;
+    width: 100%;
+  }
+  .form_hidden {
+    display: none;
+  }
+  .form__submit-block {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+    align-items: flex-start;
   }
 }

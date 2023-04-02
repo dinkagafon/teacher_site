@@ -1,0 +1,6 @@
+.logo__name {
+  color: var(--color-text-primary);
+}
+.logo__surname {
+  color: var(--color-text-secondary);
+}

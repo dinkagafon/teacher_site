@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-weight: 400;
   font-family: "SFProDisplay";
   font-style: normal;
@@ -7,6 +8,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-weight: 500;
   font-family: "SFProDisplay";
   font-style: normal;
@@ -15,6 +17,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-weight: 400;
   font-family: "Concrete";
   font-style: normal;
@@ -23,97 +26,263 @@
 }
 
 :root {
-  --font-family-text: SFProDisplayt, sans-serif;
+  --font-family-text: SFProDisplay, sans-serif;
   --font-family-header: Concrete, sans-serif;
   --font-family-header-secondary: SFProDisplay, sans-serif;
 }
 
+.text {
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_h1 {
+  font-family: var(--font-family-header);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_h2 {
+  font-family: var(--font-family-header);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_h3 {
+  font-family: var(--font-family-header-secondary);
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_big {
+  font-family: var(--font-family-text);
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_main {
+  font-family: var(--font-family-text);
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_small {
+  font-family: var(--font-family-text);
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_number {
+  font-family: var(--font-family-text);
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 130%;
+}
+
+.text_benefit {
+  font-family: var(--font-family-text);
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--primary);
+}
+
 /* 2xl */
 @media (min-width: 1536px) {
-  :root {
-    --font-size-text-small: 20px;
-    --font-size-text-main: 24px;
-    --font-size-text-big: 28px;
-    --font-size-text-benefit: 70px;
-    --font-size-text-number: 120px;
-    --font-size-h1: 40px;
-    --font-size-h2: 36px;
-    --font-size-h3: 32px;
-    --font-size-number: 120px;
+  .text_h1 {
+    font-size: 34px;
+    letter-spacing: 0.05em;
+  }
+  .text_h2 {
+    font-size: 32px;
+    letter-spacing: 0.1em;
+  }
+  .text_h3 {
+    font-size: 26px;
+    letter-spacing: 0.05em;
+  }
+  .text_big {
+    font-size: 28px;
+    letter-spacing: 0.05em;
+  }
+  .text_main {
+    font-size: 24px;
+  }
+  .text_small {
+    font-size: 20px;
+  }
+  .text_number {
+    font-size: 120px;
+  }
+  .text_benefit {
+    font-size: 70px;
   }
 }
 
 /* xl */
 @media (min-width: 1280px) and (max-width: 1535px) {
-  :root {
-    --font-size-text-small: 16px;
-    --font-size-text-main: 20px;
-    --font-size-text-big: 24px;
-    --font-size-text-benefit: 64px;
-    --font-size-text-number: 120px;
-    --font-size-h1: 36px;
-    --font-size-h2: 32px;
-    --font-size-h3: 28px;
-    --font-size-number: 120px;
+  .text_h1 {
+    font-size: 30px;
+    letter-spacing: 0.05em;
+  }
+  .text_h2 {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+  }
+  .text_h3 {
+    font-size: 24px;
+    letter-spacing: 0.05em;
+  }
+  .text_big {
+    font-size: 24px;
+    letter-spacing: 0.05em;
+  }
+  .text_main {
+    font-size: 20px;
+  }
+  .text_small {
+    font-size: 16px;
+  }
+  .text_number {
+    font-size: 120px;
+  }
+  .text_benefit {
+    font-size: 64px;
   }
 }
 
 /* lg */
 @media (min-width: 1024px) and (max-width: 1279px) {
-  :root {
-    --font-size-text-small: 14px;
-    --font-size-text-main: 18px;
-    --font-size-text-big: 20px;
-    --font-size-text-benefit: 56px;
-    --font-size-text-number: 120px;
-    --font-size-h1: 28px;
-    --font-size-h2: 26px;
-    --font-size-h3: 24px;
-    --font-size-number: 120px;
+  .text_h1 {
+    font-size: 26px;
+    letter-spacing: 0.02em;
+  }
+  .text_h2 {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+  }
+  .text_h3 {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+  }
+  .text_big {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+  .text_main {
+    font-size: 18px;
+  }
+  .text_small {
+    font-size: 14px;
+  }
+  .text_number {
+    font-size: 120px;
+  }
+  .text_benefit {
+    font-size: 56px;
   }
 }
 
 /* md */
 @media (min-width: 768px) and (max-width: 1023px) {
-  :root {
-    --font-size-text-small: 14px;
-    --font-size-text-main: 18px;
-    --font-size-text-big: 20px;
-    --font-size-text-benefit: 40px;
-    --font-size-text-number: 120px;
-    --font-size-h1: 28px;
-    --font-size-h2: 26px;
-    --font-size-h3: 24px;
-    --font-size-number: 120px;
+  .text_h1 {
+    font-size: 26px;
+    letter-spacing: 0.02em;
+  }
+  .text_h2 {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+  }
+  .text_h3 {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+  }
+  .text_big {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+  .text_main {
+    font-size: 18px;
+  }
+  .text_small {
+    font-size: 14px;
+  }
+  .text_number {
+    font-size: 120px;
+  }
+  .text_benefit {
+    font-size: 40px;
   }
 }
 
 /* sm */
 @media (min-width: 640px) and (max-width: 767px) {
-  :root {
-    --font-size-text-small: 14px;
-    --font-size-text-main: 18px;
-    --font-size-text-big: 20px;
-    --font-size-text-benefit: 36px;
-    --font-size-text-number: 120px;
-    --font-size-h1: 28px;
-    --font-size-h2: 26px;
-    --font-size-h3: 24px;
-    --font-size-number: 120px;
+  .text_h1 {
+    font-size: 26px;
+    letter-spacing: 0.02em;
+  }
+  .text_h2 {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+  }
+  .text_h3 {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+  }
+  .text_big {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+  .text_main {
+    font-size: 18px;
+  }
+  .text_small {
+    font-size: 14px;
+  }
+  .text_number {
+    font-size: 120px;
+  }
+  .text_benefit {
+    font-size: 36px;
   }
 }
 
 /* df */
 @media (max-width: 639px) {
-  :root {
-    --font-size-text-small: 14px;
-    --font-size-text-main: 16px;
-    --font-size-text-big: 16px;
-    --font-size-text-benefit: 20px;
-    --font-size-text-number: 80px;
-    --font-size-h1: 26px;
-    --font-size-h2: 20px;
-    --font-size-h3: 18px;
-    --font-size-number: 80px;
+  .text_h1 {
+    font-size: 22px;
+  }
+  .text_h2 {
+    font-size: 22px;
+    letter-spacing: 0.02em;
+  }
+  .text_h3 {
+    font-size: 21px;
+    letter-spacing: 0.05em;
+    line-height: 130%;
+  }
+  .text_big {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+  .text_main {
+    font-size: 18px;
+  }
+  .text_small {
+    font-size: 16px;
+  }
+  .text_number {
+    font-size: 68px;
+    line-height: 100%;
+  }
+  .text_benefit {
+    font-size: 24px;
   }
 }

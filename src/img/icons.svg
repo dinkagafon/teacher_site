@@ -10,31 +10,121 @@
     <line y1="-0.5" x2="50" y2="-0.5" transform="matrix(0.707107 -0.707107 0.722764 0.691095 1.32239 36.5)" stroke="#271100"/>
     <line y1="-0.5" x2="50" y2="-0.5" transform="matrix(0.707107 0.707107 -0.722764 0.691095 1.32239 1.5)" stroke="#271100"/>
   </svg>
-  <svg id='speed' viewBox="0 0 60 60" fill="none"
-    xmlns="http://www.w3.org/2000/svg">
-    <path d="M36.9992 25L37.9992 27L39.9991 28C34.1961 40.2681 28 45.5 22.9992 41.5C18.4999 36.5 20.3434 32.2376 36.9992 25Z" stroke="#39A865" stroke-width="2.5"/>
-    <path d="M4.5 38.5L12 36.5" stroke="#39A865" stroke-width="2.5"/>
-    <path d="M56.3254 39.2196L48.9997 36.6535" stroke="#39A865" stroke-width="2.5"/>
-    <path d="M8.9996 15.2269L15.1798 19.9231" stroke="#39A865" stroke-width="2.5"/>
-    <path d="M49.8067 15.9993L43.8398 20.9638" stroke="#39A865" stroke-width="2.5"/>
-    <path d="M30.1154 6.00045L29.9192 13.7601" stroke="#39A865" stroke-width="2.5"/>
-    <path d="M12.5 52.5C9.5 50 3 44 3 31C3 18 14.9998 5 30 5C45.0002 5 57 18 57 31C57 44 51 49 47.5 52.5" stroke="#39A865" stroke-width="2.5"/>
+  <svg id='speed' fill="none"
+    xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+    <path d="M36.9992 25L37.9992 27L39.9991 28C34.1961 40.2681 28 45.5 22.9992 41.5C18.4999 36.5 20.3434 32.2376 36.9992 25Z" stroke-width="2.5"/>
+    <path d="M4.5 38.5L12 36.5" stroke-width="2.5"/>
+    <path d="M56.3254 39.2196L48.9997 36.6535" stroke-width="2.5"/>
+    <path d="M8.9996 15.2269L15.1798 19.9231" stroke-width="2.5"/>
+    <path d="M49.8067 15.9993L43.8398 20.9638" stroke-width="2.5"/>
+    <path d="M30.1154 6.00045L29.9192 13.7601" stroke-width="2.5"/>
+    <path d="M12.5 52.5C9.5 50 3 44 3 31C3 18 14.9998 5 30 5C45.0002 5 57 18 57 31C57 44 51 49 47.5 52.5" stroke-width="2.5"/>
   </svg>
   <svg id='speed_blue' viewBox="0 0 40 41" fill="none">
-    <path d="M24.6664 17.167L25.3331 18.5003L26.6664 19.167C22.7977 27.3457 18.667 30.8337 15.3331 28.167C12.3335 24.8337 13.5626 21.992 24.6664 17.167Z" stroke="#689BD8" stroke-width="2.5"/>
-    <path d="M3 26.1663L8 24.833" stroke="#689BD8" stroke-width="2.5"/>
-    <path d="M37.5503 26.6467L32.6665 24.936" stroke="#689BD8" stroke-width="2.5"/>
-    <path d="M5.99973 10.6509L10.1199 13.7818" stroke="#689BD8" stroke-width="2.5"/>
-    <path d="M33.2044 11.1659L29.2265 14.4756" stroke="#689BD8" stroke-width="2.5"/>
-    <path d="M20.0769 4.49998L19.9461 9.67305" stroke="#689BD8" stroke-width="2.5"/>
-    <path d="M8.33333 35.4997C6.33333 33.833 2 29.833 2 21.1663C2 12.4997 9.99986 3.83301 20 3.83301C30.0001 3.83301 38 12.4997 38 21.1663C38 29.833 34 33.1663 31.6667 35.4997" stroke="#689BD8" stroke-width="2.5"/>
+    <path d="M24.6664 17.167L25.3331 18.5003L26.6664 19.167C22.7977 27.3457 18.667 30.8337 15.3331 28.167C12.3335 24.8337 13.5626 21.992 24.6664 17.167Z" stroke-width="2.5"/>
+    <path d="M3 26.1663L8 24.833" stroke-width="2.5"/>
+    <path d="M37.5503 26.6467L32.6665 24.936" stroke-width="2.5"/>
+    <path d="M5.99973 10.6509L10.1199 13.7818" stroke-width="2.5"/>
+    <path d="M33.2044 11.1659L29.2265 14.4756" stroke-width="2.5"/>
+    <path d="M20.0769 4.49998L19.9461 9.67305" stroke-width="2.5"/>
+    <path d="M8.33333 35.4997C6.33333 33.833 2 29.833 2 21.1663C2 12.4997 9.99986 3.83301 20 3.83301C30.0001 3.83301 38 12.4997 38 21.1663C38 29.833 34 33.1663 31.6667 35.4997" stroke-width="2.5"/>
   </svg>
-  <svg id='person' viewBox="0 0 40 41" fill="none">
-    <path d="M28.0833 12.833C28.0833 17.0708 24.5075 20.583 20 20.583C15.4924 20.583 11.9166 17.0708 11.9166 12.833C11.9166 8.59526 15.4924 5.08301 20 5.08301C24.5075 5.08301 28.0833 8.59526 28.0833 12.833Z" stroke="#689BD8" stroke-width="2.5"/>
-    <path d="M4 31.8327V37.1663H36V31.8327C29.6 23.8331 9.94286 23.8329 4 31.8327Z" stroke="#689BD8" stroke-width="2.5"/>
+  <svg id='person' viewBox="0 0 40 41" stroke="currentColor" fill="none">
+    <path d="M28.0833 12.833C28.0833 17.0708 24.5075 20.583 20 20.583C15.4924 20.583 11.9166 17.0708 11.9166 12.833C11.9166 8.59526 15.4924 5.08301 20 5.08301C24.5075 5.08301 28.0833 8.59526 28.0833 12.833Z" stroke-width="2.5"/>
+    <path d="M4 31.8327V37.1663H36V31.8327C29.6 23.8331 9.94286 23.8329 4 31.8327Z" stroke-width="2.5"/>
   </svg>
   <svg id='plus' viewBox="0 0 48 48" fill="none">
     <path d="M14 24H34" stroke="#271100" stroke-width="2" stroke-linecap="round"/>
     <path d="M24 14V34" stroke="#271100" stroke-width="2" stroke-linecap="round"/>
   </svg>
+  <svg id='volume' viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+  </svg>
+  <svg id='volume-x' viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <line x1="23" y1="9" x2="17" y2="15"></line>
+    <line x1="17" y1="9" x2="23" y2="15"></line>
+  </svg>
+  <svg id='math' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <path d="M9 17H24.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M35 40H50.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M9 43H24.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M35 47H50.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M17 35V50.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M37.5 11.5L48.5 22.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M48.5 11.5L37.5 22.5" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+  <svg id='literacy' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <path d="M30.3214 14.8744C20.6273 8.62 12.7652 8.3784 3.22331 14.7249C3.08486 14.817 3 14.9741 3 15.1404V49.5937C3 49.9584 3.37885 50.2005 3.71298 50.0543C12.9746 46.0027 22.2082 46.1094 30.3214 50.3744M30.3214 14.8744C38.8286 8.42398 47.3359 8.37545 55.8431 14.7295C55.9642 14.8199 56.0384 14.9623 56.0429 15.1133L57.0801 49.4797C57.0919 49.8707 56.6691 50.1252 56.3224 49.9439C48.789 46.005 38.7053 46.1485 30.3214 50.3744M30.3214 14.8744L30.3214 50.3744" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M9.78613 38L15.3146 22.3359C15.4716 21.8911 16.1006 21.8911 16.2576 22.3359L21.7861 38" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M12.2861 31.5H19.2861" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M38 24H49.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M38 29H49.5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M38 34H49.5" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+  <svg id='world' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <circle cx="30" cy="30" r="25.75" stroke-width="2.5"/>
+    <path d="M18.0128 25C13.8491 25.2375 12.2411 28.0379 13.3318 33.0276C13.3464 33.0946 13.3745 33.1599 13.4193 33.2118C14.1749 34.087 16.1834 34.087 17.314 34.087C19.1474 34.3223 19.8531 35.0206 21.8724 35.9542C21.9375 35.9843 22.011 36.0002 22.0826 35.9995C24.7731 35.9743 25 35.018 25 33.1304C25 30.0217 22.6708 25 18.0128 25Z" stroke-width="2" stroke-linecap="round"/>
+    <path d="M33.224 6C33.8835 6 30.5135 7.43836 30.2559 9.45205C29.9044 12.2003 31.2452 12.9041 30.2559 15.7808C28.2949 20.0573 28.2776 24.0513 32.7715 26.9226C32.8503 26.973 32.947 27.0002 33.0405 26.9992C41.1229 26.9115 41.8236 19.5589 46.7016 18.6653C46.7299 18.6601 46.7605 18.6573 46.7893 18.6584C49.3759 18.7644 48.7534 28.1409 54 26.4247" stroke-width="2" stroke-linecap="round"/>
+    <path d="M20 53.7449C28.5795 46.2148 37.5022 48.4114 35.7863 55" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <svg id='focus' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <path d="M48.75 30.5C48.75 41.1608 40.3264 49.75 30 49.75C19.6736 49.75 11.25 41.1608 11.25 30.5C11.25 19.8392 19.6736 11.25 30 11.25C40.3264 11.25 48.75 19.8392 48.75 30.5Z" stroke-width="2.5"/>
+    <circle cx="30" cy="30" r="5" fill="#977AE9"/>
+    <path d="M30 11V3" stroke-width="2.5"/>
+    <path d="M30 57V49" stroke-width="2.5"/>
+    <path d="M49 30H57" stroke-width="2.5"/>
+    <path d="M3 30H11" stroke-width="2.5"/>
+  </svg>
+  <svg id='figure' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <circle cx="17" cy="28" r="15.8" stroke-width="2.4"/>
+    <path d="M55.5 54L38 24.5L21 54H55.5Z" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M44.9997 35H57.9997V5.5C48.3331 5.5 28.8 5.5 28 5.5V15.5" stroke-width="2.4" stroke-linecap="round"/>
+  </svg>
+  <svg id='logic' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <path d="M9 17V43.5" stroke-width="2.5"/>
+    <path d="M30 17V43.5" stroke-width="2.5"/>
+    <path d="M51 30.5H10" stroke-width="2.5"/>
+    <path d="M50 17V30.5" stroke-width="2.5"/>
+    <circle cx="9" cy="48" r="4.75" stroke-width="2.5"/>
+    <circle cx="30" cy="48" r="4.75" stroke-width="2.5"/>
+    <circle cx="9" cy="12" r="4.75" stroke-width="2.5"/>
+    <circle cx="30" cy="12" r="4.75" stroke-width="2.5"/>
+    <circle cx="50" cy="12" r="4.75" stroke-width="2.5"/>
+  </svg>
+  <svg id='cub' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <path d="M17 10H42.691C42.8804 10 43.0535 10.107 43.1382 10.2764L53 30M17 10L7.11734 29.7653C7.04386 29.9123 7.04727 30.0859 7.12644 30.2299L18 50M17 10L28 30M53 30L43.1363 49.2342C43.0523 49.3979 42.8853 49.5023 42.7014 49.506L18 50M53 30H28M18 50L28 30" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+  <svg id='algorithm' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <rect x="24.25" y="9.25" width="11.5" height="11.5" stroke-width="2.5"/>
+    <rect x="1.25" y="39.25" width="11.5" height="11.5" stroke-width="2.5"/>
+    <rect x="24.25" y="39.25" width="11.5" height="11.5" stroke-width="2.5"/>
+    <rect x="47.25" y="39.25" width="11.5" height="11.5" stroke-width="2.5"/>
+    <path d="M30 20.5V33" stroke-width="2.5"/>
+    <path d="M7.5 32.5V28H52.5V32.5" stroke="#977AE9" stroke-width="2.5"/>
+  </svg>
+  <svg id='pattern' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <rect x="38.25" y="10.25" width="11.5" height="11.5" stroke-width="2.5"/>
+    <path d="M46.5 37L40 43.5L46.5 50.5" stroke-width="2.5"/>
+    <path d="M9 51L16 37L23 51H9Z" stroke-width="2.5"/>
+    <circle cx="16" cy="16" r="5.75" stroke-width="2.5"/>
+    <path d="M30 5V55" stroke-width="2.5"/>
+    <path d="M5 30H54.5" stroke-width="2.5"/>
+  </svg>
+  <svg id='list' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <path d="M31 50H10V10H49.5V31" stroke-width="2.5"/>
+    <path d="M18.5 20H41" stroke-width="2.5"/>
+    <path d="M19 30H41.5" stroke-width="2.5"/>
+    <path d="M19 40H41.5" stroke-width="2.5"/>
+    <circle cx="45" cy="45" r="15" fill="white" stroke-width="0"/>
+    <path d="M38 44.5L42 49.5L52 40" stroke-width="2.5"/>
+  </svg>
+  <svg id='person-big' viewBox="0 0 60 60" fill="none" stroke="currentColor">
+    <path d="M42.75 18.5C42.75 25.223 37.0849 30.75 30 30.75C22.9151 30.75 17.25 25.223 17.25 18.5C17.25 11.777 22.9151 6.25 30 6.25C37.0849 6.25 42.75 11.777 42.75 18.5Z" stroke-width="2.5"/>
+    <path d="M6 46.9996V55H54V46.9996C44.4 35.0001 14.9143 34.9998 6 46.9996Z" stroke-width="2.5"/>
+  </svg>
+
+
+
 </svg>

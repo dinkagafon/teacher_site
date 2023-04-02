@@ -1,12 +1,7 @@
-.experience {
-  padding: 52px 0;
-}
-
 .experience__header {
   text-align: left;
   color: var(--color-text-primary);
-  font-size: var(--font-size-h2);
-  font-weight: 400;
+
   margin-bottom: 40px;
   margin-left: 72px;
   margin-right: 72px;
@@ -30,7 +25,6 @@
   justify-content: end;
   flex-direction: column;
   width: var(--width-experience-elem);
-  margin-right: var(--grid-gutter);
 }
 
 .experience__slider-elem:not(:last-child)::after {
@@ -44,6 +38,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: -1;
+  bottom: 16px;
 }
 
 .experience__slider-bullet {
@@ -87,7 +82,7 @@
     --diameter: 70px;
   }
   .experience__slider-elem:not(:last-child)::after {
-    left: 155px;
+    left: 100px;
   }
 }
 
@@ -98,7 +93,7 @@
     --diameter: 70px;
   }
   .experience__slider-elem:not(:last-child)::after {
-    left: 155px;
+    left: 100px;
   }
   .experience__header {
     margin-left: 20px;
@@ -113,13 +108,13 @@
     --diameter: 60px;
   }
   .experience__slider-elem:not(:last-child)::after {
-    left: 155px;
+    left: 100px;
   }
   .experience__header {
     margin-left: 20px;
     margin-right: 20px;
   }
   .experience__slider-container {
-    height: 260px;
+    height: 290px;
   }
 }

@@ -1,88 +1,66 @@
-{% if direct %}
-  {% set background = "--color-"+ direct +"-back" %}
-{% else %}
-  {% set background = "--color-main-back" %}
-{% endif %}
-
-<section class="request">
-  <form action="mailto:nikitagafon@yandex.ru" enctype="text/plain" class="request__form form" style='color: var({{ background }})'>
-    <label for="parent"  class="form__title">Имя родителя</label>
-    <input type="text" name="parent" id="parent" placeholder="Анастасия Андреевна" required>
-
-    <label for="children"  class="form__title">Имя ребенка</label>
-    <input type="text" name="children" id="children" placeholder="Ксения" required>
-    <label for="phone"  class="form__title">Телефон</label>
-    <input type="phone" name="parent" id="phone" placeholder="+7 (977) 267-23-77" required>
-    <span class="form__title form__title_top">Направления</span>
-    <div class="form__checkbox-container">
-      <input type="checkbox" name="direction" value="mental" id="mental">
-      <label class="form__checkbox" for="mental">
-        ментальная арифметика
-      </label>
-      <input type="checkbox" name="direction" value="reading" id="reading">
-      <label class="form__checkbox" for="reading">
-        словолодочки
-      </label>
-      <div class="form__checkbox-new-row"></div>
-      <input type="checkbox" name="direction" value="cognition" id="cognition">
-      <label class="form__checkbox" for="cognition">
-        позновательные способности
-
-      </label>
-      <input type="checkbox" name="direction" value="speed_reading" id="speed_reading">
-      <label class="form__checkbox" for="speed_reading">
-        скорочтение
-
-      </label>
-      <div class="form__checkbox-new-row"></div>
-      <input type="checkbox" name="direction" value="pre_school" id="pre_school">
-      <label class="form__checkbox" for="pre_school">
-        подготовка к школе
-
-      </label>
-      <input type="checkbox" name="direction" value="primary_school" id="primary_school">
-      <label class="form__checkbox" for="primary_school">
-        начальные классы
-
-      </label>
-      <div class="form__checkbox-new-row"></div>
-      <input type="checkbox" name="direction" value="math" id="math">
-      <label class="form__checkbox" for="math">
-        математика
-
-      </label>
-      <input type="checkbox" name="direction" value="olimpiad_math" id="olimpiad_math">
-      <label class="form__checkbox" for="olimpiad_math">
-        олимпиадная математика
-
-      </label>
-    </div>
-    <span class="form__title form__title_top">Способ связи</span>
-    <div class="form__checkbox-container form__checkbox-container_mobile-one-row">
-      <input type="checkbox" name="connect" value="telegram" id="telegram">
-      <label class="form__checkbox" for="telegram">
+<section class="section request" id="form" style="background-color: {{ 'var(--color-main-back)' if page.url === '/' else colors.background }}">
+  <div class="section__content">
+    <div class="request__container">
+      <h2 class="text_h2">Заполните форму и обеспечьте своему ребенку успешную учебу уже сегодня!</h2>
+      <form action="" class="form">
+        <div class="form__content" style="--color-checked: {{ 'var(--main-accent)' if page.url === '/' else colors.accent }}">
+          <label for="parent"  class="form__title text_main">Имя родителя</label>
+          <input type="text" class="text_small" name="parent" id="parent" placeholder="Анастасия Андреевна">
+          <label for="children"  class="form__title text_main">Имя ребенка</label>
+          <input type="text" class="text_small" name="children" id="children" placeholder="Ксения">
+          <label for="tel"  class="form__title text_main">Телефон</label>
+          <input type="phone" class="text_small" name="parent" id="phone" required>
+          <span class="form__title form__title_top text_main">Направления</span>
+          <div class="form__checkbox-container text_small">
+            {% for direction in collections.directions %}
+              <input type="checkbox" name="direction" value="{{ direction.fileSlug }}" id="{{ direction.fileSlug }}" {{'checked' if direction.url === page.url}}>
+              <label class="form__checkbox" for="{{ direction.fileSlug }}">
+                {{ direction.data.title }}
+              </label>
+            {% endfor %}
+          </div>
+          <span class="form__title form__title_top text_main">Способ связи</span>
+          <div class="form__checkbox-container form__checkbox-container_mobile-one-row text_small">
+            <input type="checkbox" name="connect" value="telegram" id="telegram">
+            <label class="form__checkbox" for="telegram">
         telegram
 
       </label>
-      <input type="checkbox" name="connect" value="whatsup" id="whatsup">
-      <label class="form__checkbox" for="whatsup">
+            <input type="checkbox" name="connect" value="whatsup" id="whatsup">
+            <label class="form__checkbox" for="whatsup">
         whatsup
 
       </label>
-      <input type="checkbox" name="connect" value="sms" id="sms">
-      <label class="form__checkbox" for="sms">
+            <input type="checkbox" name="connect" value="sms" id="sms">
+            <label class="form__checkbox" for="sms">
         sms
 
       </label>
+          </div>
+
+        </div>
+        <div class="form__submit-block">
+          <button type="submit" class="form__submit">
+            {% from 'macros/animated-button.njk' import animatedButton %}
+            {{ animatedButton(
+            text='Оставить заявку'
+          ) }}
+          </button>
+          <span class="form__error-mes text_main"></span>
+        </div>
+
+      </form>
+
     </div>
-    <button type="submit" class="form__submit button button_connect">
-      <span class="button__ripple">
-        <span></span>
-      </span>
-      <span class="button__text">
-        <span data-text="Оставить заявку">Оставить заявку</span>
-      </span>
-    </button>
-  </form>
+    <div class="request__succes">
+      <picture class="request__succes-img">
+        <img src="/img/photos/sticker_mama.png" alt="Фотография Юлии">
+      </picture>
+      <h2 class="request__succes-text text_h1">
+        Cкоро я свяжусь с Вами,
+        и мы вместе узнаем что-то новое
+      </h2>
+    </div>
+  </div>
 
 </section>

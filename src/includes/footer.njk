@@ -1,48 +1,58 @@
-<footer class="footer container" style='background-color: var({{ background }})'>
-  <div class="footer__title">
+<footer class="footer container" style="--hover-color: {{ 'var(--color-main-accent-contrast)' if page.url === '/' else colors.accent_contrast}}; background-color: {{ 'var(--color-main-back)' if page.url === '/' else colors.background }}">
+  <div class="footer__title text_big">
     Репетитор Михайленко Юлия
   </div>
-  <div class="footer__map">
+  <div class="footer__map text_main">
     <div class="footer__about">
-      <a href="#">
+      <a href="/">
         <p class="footer__link">Обо мне</p>
       </a>
     </div>
     <div class="footer__columns">
       <div class="footer__side">
-        <a href="#">
-          <p class="footer__link">Обучение чтению по методике Словолодочки</p>
+        <a href="/directions/reading">
+          <p class="footer__link">Обучение чтению Словолодочки</p>
         </a>
-        <a href="#">
+        <a href="/directions/speed_reading">
           <p class="footer__link">Скорочтение</p>
         </a>
-        <a href="#">
-          <p class="footer__link">Ментальная арифметика</p>
+        <a href="/directions/primary_school">
+          <p class="footer__link">Начальные классы</p>
         </a>
-        <a href="#">
-          <p class="footer__link">Олимпиадная математика</p>
+        <a href="/directions/mental">
+          <p class="footer__link">Ментальная арифметика</p>
         </a>
       </div>
       <div class="footer__side">
-        <a href="#">
-          <p class="footer__link">Развитие позновательных способностей</p>
+        <a href="/directions/cognition">
+          <p class="footer__link">Познавательные способности</p>
         </a>
-        <a href="#">
+        <a href="/directions/pre_school">
           <p class="footer__link">Подготовка к школе</p>
         </a>
-        <a href="#">
-          <p class="footer__link">Начальные классы</p>
+        <a href="/directions/math">
+          <p class="footer__link">Математика 5 и 6 класс</p>
         </a>
-        <a href="#">
-          <p class="footer__link">5 - 6 класс</p>
+        <a href="/directions/olimpiad_math">
+          <p class="footer__link">Олимпиадная математика</p>
         </a>
       </div>
     </div>
   </div>
-  <div class="footer__contacts">
-    <p class="footer__link">Контакты</p>
-    <a href="#">
-      <p class="footer__link">+7 (915) 355-64-31</p>
-    </a>
+  <div class="footer__contacts text_small">
+    <div class="footer__contacts-wrapper">
+      <a href="#" class="footer__link">
+        +7 (915) 355-64-31
+      </a>
+      <a href="#" class="footer__link">
+        Telegram
+      </a>
+      <a href="#" class="footer__link">
+        Вконтакте
+      </a>
+      <a href="#" class="footer__link">
+        Tik Tok
+      </a>
+    </div>
   </div>
 </footer>

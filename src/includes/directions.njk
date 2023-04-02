@@ -1,40 +1,42 @@
-<section class="directions container">
-  <div class="directions__screen-wrapper">
-    <div class="directions__screen">
-      {% for name, params in directions %}
-        <a href="#">
-          <div class="directions__image" data-direction="{{- name -}}" style="z-index: {{- loop.revindex -}}; background-image: url(/img/directions/{{- name -}}_preview.jpg);"></div>
-        </a>
+<section class="section directions" style="background-color: {{ collections.directions[0].data.colors.background }}" id="directions">
+  <div class="section__content">
+    <div class="directions__screen-wrapper">
+      <div class="directions__screen">
+        {% for direction in collections.directions %}
+          <a href="{{ direction.url }}" tabindex="-1">
+            <div class="directions__image" data-direction="{{- direction.fileSlug -}}" style="z-index: {{- loop.revindex -}}; background-image: url({{direction.url}}/{{ direction.data.preview_image }});"></div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="directions__container">
+      {% for direction in collections.directions %}
+        <div class="directions__wrapper" data-title="{{- direction.fileSlug -}}" data-background="{{ direction.data.colors.background }}">
+          <div class="directions__screen directions__screen_mobile">
+            <a href="{{ direction.url }}">
+              <div class="directions__image" data-direction="{{- direction.fileSlug -}}" style="z-index: {{- loop.revindex -}}; background-image: url({{direction.url}}/{{ direction.data.preview_image }});"></div>
+            </a>
+          </div>
+          <div class="directions__content" >
+            <p class="directions__age text_main">
+              {{- direction.data.age -}}
+            </p>
+            <h3 class="directions__title text_h3">
+              {{ direction.data.full_title | striptags(true) | escape | nl2br }}
+            </h3>
+            {% from 'macros/animated-button.njk' import animatedButton %}
+            <a href='{{ direction.url }}' class="directions__link">
+              {{ animatedButton(
+                  text='Подробнее',
+                  borderColor=direction.data.colors.accent_contrast,
+                  size='small'
+              ) }}
+            </a>
+          </div>
+
+        </div>
+
       {% endfor %}
     </div>
-  </div>
-  <div class="directions__container">
-    {% for name, params in directions %}
-      <div class="directions__wrapper" data-title="{{- name -}}">
-        <div class="directions__screen directions__screen_mobile">
-          <a href="#">
-            <div class="directions__image" data-direction="{{- name -}}" style="z-index: {{- loop.revindex -}}; background-image: url(/img/directions/{{- name -}}_preview.jpg);"></div>
-          </a>
-        </div>
-        <div class="directions__content" >
-          <p class="directions__age">
-            {{- params.age -}}
-          </p>
-          <h3 class="directions__title">
-            {{ params.full_name }}
-          </h3>
-          <a href="#" class="directions__link button button_second" style="border-color: var(--color-{{- name -}}-accent-contrast)">
-            <span class="button__ripple">
-              <span></span>
-            </span>
-            <span class="button__text">
-              <span data-text="Подробнее">Подробнее</span>
-            </span>
-          </a>
-        </div>
-
-      </div>
-
-    {% endfor %}
   </div>
 </section>

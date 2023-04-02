@@ -1,0 +1,13 @@
+{% macro phase(number, header, discription, gradient) %}
+  <div class="phase">
+    <div class="phase__title">
+      <span class="phase__number text_number" style="background-image: {{ gradient }};">{{ number }}</span>
+      <h3 class="phase__header text_h3">
+        {{ header }}
+      </h3>
+    </div>
+    <p class="phase__discription text_main">
+      {{ discription }}
+    </p>
+  </div>
+{% endmacro %}

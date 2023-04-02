@@ -1,0 +1,10 @@
+{% macro animatedButton(text, borderColor = '', size = 'default') %}
+  <div class="animated-button {{'text_main' if size === 'default' else 'text_small animated-button_small' }}" style="border-color: {{ borderColor }}">
+    <span class="animated-button__ripple">
+      <span></span>
+    </span>
+    <span class="animated-button__text">
+      <span data-text="{{ text }}">{{ text }}</span>
+    </span>
+  </div>
+{% endmacro %}

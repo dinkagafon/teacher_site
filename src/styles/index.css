@@ -1,18 +1,21 @@
-@import "../../node_modules/swiper/swiper.min.css";
-@import "../../node_modules/swiper/modules/pagination/pagination.min.css";
+@import "swiper/swiper.min.css";
+@import "swiper/modules/pagination/pagination.min.css";
+@import "swiper/modules/keyboard/keyboard.min.css";
+@import "viewerjs/dist/viewer.css";
+@import "intl-tel-input/build/css/intlTelInput.css";
 @import "fonts.css";
 @import "colors.css";
 @import "sizes.css";
 @import "global.css";
 
+@import "blocks/section.css";
 @import "blocks/header.css";
 @import "blocks/footer.css";
 @import "blocks/anchors.css";
-@import "blocks/menu.css";
 @import "blocks/container.css";
+@import "blocks/menu.css";
 @import "blocks/hello.css";
 @import "blocks/highlight.css";
-@import "blocks/button.css";
 @import "blocks/die.css";
 @import "blocks/directions.css";
 @import "blocks/reviews.css";
@@ -29,4 +32,10 @@
 @import "blocks/direction-numbers.css";
 @import "blocks/direction-why.css";
 @import "blocks/prise.css";
-@import "blocks/faq.css";
+@import "blocks/certificates.css";
+@import "blocks/logo.css";
+@import "blocks/phase.css";
+@import "blocks/benefit.css";
+@import "blocks/faq-block.css";
+@import "blocks/animated-button.css";
+@import "blocks/scrollbar-measure.css";

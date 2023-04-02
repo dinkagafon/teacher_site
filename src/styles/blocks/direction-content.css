@@ -40,8 +40,6 @@
 }
 
 .direction-content__anchore {
-  font-family: var(--font-family-header);
-  font-size: var(--font-size-h2);
   color: var(--color-text-secondary);
   cursor: pointer;
   text-align: center;
@@ -54,7 +52,4 @@
 }
 
 .direction-content__slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }

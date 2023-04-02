@@ -1,41 +1,45 @@
-<section class="reviews">
-  <h2 class="reviews__header">
-    «Учитель – человек, который может делать трудные вещи лёгкими» Ральф Эмерсон
-  </h2>
-  <div class="swiper slider" role="region" aria-label="Отзывы" tabindex="0">
-    <ul class="swiper-wrapper slider__container" >
-      {% for comment in comments %}
-        <li class="swiper-slide slider__elem">
-          <div class="comment">
-            <span class="comment__author">{{- comment.author -}}</span>
-            <p class="comment__text">
-              {{- comment.text -}}
-            </p>
-            <button class="comment__show-more-button comment__show-more-button_hidden">Показать больше</button>
-            <div class="comment__direction-container" >
-              {% for direct in comment.directs %}
-                <span class="comment__direction" style="background-color: var(--color-{{ direct }}-back">{{- directions[direct].name -}}</span>
-              {% endfor %}
+<section class="section" id="reviews">
+  <h2 class="section__header text_h2">«Учитель – человек, который может делать трудные вещи лёгкими» Ральф Эмерсон</h2>
+  <div class="section__content section__content_full-width">
+    <div class="swiper slider" role="region" aria-label="Отзывы" tabindex="0">
+      <ul class="swiper-wrapper slider__container" >
+        {% for comment in comments %}
+          <li class="swiper-slide slider__elem">
+            <div class="comment">
+              <span class="comment__author text_small">{{- comment.author -}}</span>
+              <p class="comment__text text_main">
+                {{- comment.text -}}
+              </p>
+              <button class="comment__show-more-button comment__show-more-button_hidden" tabindex="{{ 0 if loop.index0 === 0 else -1}}">Показать больше</button>
+              <div class="comment__direction-container text_small" >
+                {% for direct in comment.directs %}
+                  {% for direction in collections.directions%}
+                    {% if direction.fileSlug === direct %}
+                      <span class="comment__direction" style="background-color: {{ direction.data.colors.background }}">{{ direction.data.title }}</span>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
             </div>
-          </div>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="slider__controls" aria-label="Контролы галереи">
+        <li>
+          <button id="previous" class="slider__button swiper-button-prev" aria-label="Предыдущий" tabindex="-1">
+            <svg aria-hidden="true" focusable="false" width="16" height="24">
+              <use href="/img/icons.svg#arrow-previous"/>
+            </svg>
+          </button>
         </li>
-      {% endfor %}
-    </ul>
-    <ul class="slider__controls" aria-label="Контролы галереи">
-      <li>
-        <button id="previous" class="slider__button swiper-button-prev" aria-label="Предыдущий">
-          <svg aria-hidden="true" focusable="false" width="16" height="24">
-            <use href="/img/icons.svg#arrow-previous"/>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button id="next" class="slider__button swiper-button-next" aria-label="Следующий">
-          <svg aria-hidden="true" focusable="false" width="16" height="24">
-            <use href="/img/icons.svg#arrow-next"/>
-          </svg>
-        </button>
-      </li>
-    </ul>
+        <li>
+          <button id="next" class="slider__button swiper-button-next" aria-label="Следующий" tabindex="-1">
+            <svg aria-hidden="true" focusable="false" width="16" height="24">
+              <use href="/img/icons.svg#arrow-next"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
