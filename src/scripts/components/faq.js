@@ -1,19 +1,20 @@
-const faq__content = document.querySelector(".faq__content");
-faq__content.onclick = (event) => {
-  const faq__block = event.target.closest(".faq-block");
+const faqContainer = document.querySelector(".faq__content");
 
-  if (!faq__block) return;
+faqContainer.onclick = (event) => {
+  const faqBlock = event.target.closest(".faq-block");
 
-  if (!faq__content.contains(faq__block)) return;
+  if (!faqBlock) return;
 
-  const faq__text = faq__block.querySelector(".faq-block__text");
-  const faq__answer = faq__block.querySelector(".faq-block__answer");
+  if (!faqContainer.contains(faqBlock)) return;
 
-  if (!faq__block.classList.contains("faq-block__open")) {
-    faq__answer.style.height = faq__text.clientHeight + "px";
+  const faqText = faqBlock.querySelector(".faq-block__text");
+  const faqAnswer = faqBlock.querySelector(".faq-block__answer");
+
+  if (!faqBlock.classList.contains("faq-block__open")) {
+    faqAnswer.style.height = faqText.clientHeight + "px";
   } else {
-    faq__answer.style.height = 0;
+    faqAnswer.style.height = 0;
   }
 
-  faq__block.classList.toggle("faq-block__open");
+  faqBlock.classList.toggle("faq-block__open");
 };

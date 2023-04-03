@@ -1,30 +1,33 @@
 const header = document.querySelector(".header");
 const headerHeight = header.getBoundingClientRect().height;
-let lastScroll = 0;
+
+let lastScrollYPosition = 0;
 document.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-  console.log(currentScroll, headerHeight);
+  const currentScrollYPosition = window.scrollY;
   if (
-    currentScroll > headerHeight &&
+    currentScrollYPosition > headerHeight &&
     !header.classList.contains("header_moved")
   ) {
-    header.style.transition = "none";
     header.classList.add("header_moved", "header_hidden");
-    setTimeout(() => {
-      header.style.transition = null;
-    });
+    header.style.transition = null;
   }
-  if (currentScroll === 0) {
+  if (currentScrollYPosition === 0) {
     header.classList.remove("header_moved", "header_hidden");
   }
 
-  if (lastScroll > currentScroll && header.classList.contains("header_moved")) {
+  if (
+    lastScrollYPosition > currentScrollYPosition &&
+    header.classList.contains("header_moved")
+  ) {
     header.classList.remove("header_hidden");
   }
 
-  if (lastScroll < currentScroll && header.classList.contains("header_moved")) {
+  if (
+    lastScrollYPosition < currentScrollYPosition &&
+    header.classList.contains("header_moved")
+  ) {
     header.classList.add("header_hidden");
   }
 
-  lastScroll = currentScroll;
+  lastScrollYPosition = currentScrollYPosition;
 });
