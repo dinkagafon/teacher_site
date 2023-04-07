@@ -1,0 +1,79 @@
+.subject {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 0;
+  opacity: 0;
+}
+
+.subject__icon {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 0px 50px rgba(0, 91, 111, 0.1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subject.animation {
+  animation-name: phase_show;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: calc(0.2 * var(--list-item-index));
+}
+
+@media (min-width: 1536px) {
+  .subject {
+    flex-basis: 30%;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .subject {
+    flex-basis: 30%;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .subject {
+    flex-basis: 30%;
+  }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .subject {
+    flex-basis: 45%;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) and (max-width: 767px) {
+  .subject {
+    flex-basis: 45%;
+  }
+}
+
+/* df */
+@media (max-width: 639px) {
+  .subject {
+    flex-basis: 100%;
+  }
+  .phase.animation {
+    animation-delay: calc(var(--list-item-index) * 0.1);
+  }
+}
+@keyframes phase_show {
+  0% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

@@ -3,7 +3,7 @@
     <div class="directions__screen-wrapper">
       <div class="directions__screen">
         {% for direction in collections.directions %}
-          <a href="{{ direction.url }}" tabindex="-1">
+          <a href="{{ direction.url }}" >
             <div class="directions__image" data-direction="{{- direction.fileSlug -}}" style="z-index: {{- loop.revindex -}}; background-image: url({{direction.url}}/{{ direction.data.preview_image }});"></div>
           </a>
         {% endfor %}

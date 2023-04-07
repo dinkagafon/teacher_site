@@ -1,12 +1,10 @@
-{% macro benefit(percent, text, color, gradient) %}
-  <div class="benefit">
-    <div class="benefit__title">
-      <span class="benefit__title-text text_big" style="color: {{ color }};">на</span>
-      <span class="benefit__title-number text_number" style="background-image: {{ gradient }};">{{ percent }}</span>
-      <span class="benefit__title-text text_big" style="color: {{ color }}">%</span>
+{% macro benefit(text, color) %}
+  <div class="benefit" style="border-color: {{ color }}">
+    <div class="benefit__icon" style="background-color: {{ color }}">
+      <svg aria-hidden="true" focusable="false" width="17" height="13">
+        <use href="/img/icons.svg#check"/>
+      </svg>
     </div>
-    <p class="benefit__discription text_big">
-      {{ text | striptags(true) | escape | nl2br }}
-    </p>
+    <div class="benefit__text text_big">{{ text }}</div>
   </div>
 {% endmacro %}

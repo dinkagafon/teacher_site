@@ -106,6 +106,7 @@
   .experience__slider-elem {
     --stage-count-columns: 2;
     --diameter: 60px;
+    padding-inline: 20px;
   }
   .experience__slider-elem:not(:last-child)::after {
     left: 100px;

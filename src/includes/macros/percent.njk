@@ -1,0 +1,12 @@
+{% macro percent(percent, text, color, gradient) %}
+  <div class="percent">
+    <div class="percent__title">
+      <span class="percent__title-text text_big" style="color: {{ color }};">на</span>
+      <span class="percent__title-number text_number" style="background-image: {{ gradient }};">{{ percent }}</span>
+      <span class="percent__title-text text_big" style="color: {{ color }}">%</span>
+    </div>
+    <p class="percent__discription text_big">
+      {{ text | striptags(true) | escape | nl2br }}
+    </p>
+  </div>
+{% endmacro %}

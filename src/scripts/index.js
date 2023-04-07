@@ -7,3 +7,4 @@ import "./components/certificates.js";
 import "./components/video.js";
 import "./components/header.js";
 import "./components/form.js";
+import "./components/list.js";

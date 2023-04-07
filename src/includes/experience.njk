@@ -6,18 +6,16 @@
       <ul class="experience__slider-container swiper-wrapper" >
         {% for stage in stages %}
           <li class="experience__slider-elem swiper-slide">
-            <div class="section__content">
-              <div class="stage">
-                <div class="stage__content">
-                  <h3 class="stage__title text_h3">{{- stage.title -}}</h3>
-                  <div class="stage__discrip-wrapper">
-                    <p class="stage__discrip text_main">
-                      {{- stage.discrip -}}
-                    </p>
-                  </div>
+            <div class="stage">
+              <div class="stage__content">
+                <h3 class="stage__title text_h3">{{- stage.title -}}</h3>
+                <div class="stage__discrip-wrapper">
+                  <p class="stage__discrip text_main">
+                    {{- stage.discrip -}}
+                  </p>
                 </div>
-                <div class="stage__year text_small">{{ stage.year | safe }}
-                </div>
+              </div>
+              <div class="stage__year text_small">{{ stage.year | safe }}
               </div>
             </div>
           </li>

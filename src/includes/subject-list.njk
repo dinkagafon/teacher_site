@@ -1,0 +1,16 @@
+<section class="section" id='steps'>
+  <h2 class="section__header text_h2">{{ section.header }}</h2>
+  <div class="section__content">
+    <div class="list">
+      {% from 'macros/subject.njk' import subject %}
+      {% for point in section.list %}
+        {{ subject(
+					header=point.header,
+          text=point.text,
+          color=colors.accent_contrast,
+          icon=point.icon
+				) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>

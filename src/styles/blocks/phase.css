@@ -14,6 +14,18 @@
   border-radius: 10px;
 }
 
+.phase {
+  opacity: 0;
+}
+
+.phase.animation {
+  animation-name: phase_show;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: calc(0.2 * var(--list-item-index));
+}
+
 /* df */
 @media (max-width: 639px) {
   .phase {
@@ -32,5 +44,18 @@
   .phase__header {
     margin-bottom: 4px;
     margin-left: 8px;
+  }
+  .phase.animation {
+    animation-delay: calc(var(--list-item-index) * 0.1);
+  }
+}
+@keyframes phase_show {
+  0% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

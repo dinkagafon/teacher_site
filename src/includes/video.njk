@@ -1,0 +1,25 @@
+<div class="section__container video__sticky-container">
+  <div class="section__content video__sticky">
+    <div class="video__container">
+      <video
+    muted
+    loop
+    playsinline
+    preload="none"
+    autoplay
+    src="{{ page.url }}{{ section.video }}"
+    ></video>
+      <div class="video__scrim"></div>
+    </div>
+  </div>
+
+</div>
+<div class="section__content video__content">
+  <ul class="video__list">
+    {% for point in section.list %}
+      <li class="video__text text_benefit">
+        {{ point }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

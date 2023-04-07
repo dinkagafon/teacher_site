@@ -1,0 +1,16 @@
+<section class="section" id='statistics'>
+  <h2 class="section__header text_h2">{{ section.header }}</h2>
+  <div class="section__content">
+    <div class="list">
+      {% from 'macros/percent.njk' import percent %}
+      {% for point in section.list %}
+        {{ percent(
+					percent=point.percent,
+          text=point.text,
+          color=colors.accent_contrast,
+          gradient=colors.gradient
+				) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>

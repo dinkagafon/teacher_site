@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  gap: var(--grid-gutter);
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.list > * {
+  flex: 1 1 0px;
+}
+
+/* md */
+@media (max-width: 1023px) {
+  .list > * {
+    flex: 1 1 calc((100% - var(--grid-gutter)) / 2);
+  }
+}
+
+/* df */
+@media (max-width: 639px) {
+  .list {
+    padding: 0 0;
+    gap: 24px;
+  }
+  .list > * {
+    flex: 1 1 100%;
+  }
+}

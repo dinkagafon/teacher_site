@@ -1,27 +1,51 @@
 .benefit {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 16px 24px 24px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.benefit__title-number {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+.benefit__icon {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.benefit {
+  opacity: 0;
+}
+
+.benefit.animation {
+  animation-name: benefit_show;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-delay: calc(0.2 * var(--list-item-index));
 }
 
 /* df */
 @media (max-width: 639px) {
-  .benefit {
-    flex-direction: row;
-    gap: 32px;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 12px;
-    background-color: var(--white);
-    box-shadow: 0px 0px 50px rgba(0, 91, 111, 0.1);
-    border-radius: 10px;
+  .benefit__icon {
+    margin-bottom: 16px;
   }
-  .benefit__discription {
-    width: 92px;
+  .benefit.animation {
+    animation-delay: calc(var(--list-item-index) * 0.1);
+  }
+}
+
+@keyframes benefit_show {
+  0% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

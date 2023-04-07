@@ -5,13 +5,13 @@ layout: base.njk
 {% include 'direction-starter.njk' %}
 {% for section in sections %}
   {% if section.name === 'benefits' %}
-    {% include 'direction-why.njk' %}
+    {% include 'benefit-list.njk' %}
   {% elif section.name === 'statistics' %}
-    {% include 'direction-percents.njk' %}
+    {% include 'percent-list.njk' %}
   {% elif section.name === 'what' %}
-    {% include 'direction-what.njk' %}
+    {% include 'subject-list.njk' %}
   {% elif section.name === 'numbers' %}
-    {% include 'direction-numbers.njk' %}
+    {% include 'phase-list.njk' %}
   {% endif %}
 {% endfor %}
 {% include 'prise.njk' %}

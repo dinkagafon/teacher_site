@@ -1,0 +1,15 @@
+{% macro subject(header, text, icon, color) %}
+  <div class="subject">
+    <div class="subject__icon" >
+      <svg aria-hidden="true" focusable="false" width="60" height="60" style="color: {{ color }}" >
+        <use href="/img/icons.svg#{{ icon }}"/>
+      </svg>
+    </div>
+    <h3 class="subject__header text_h3">
+      {{ header | striptags(true) | escape | nl2br }}
+    </h3>
+    <p class="subject__text text_main">
+      {{ text | striptags(true) | escape | nl2br }}
+    </p>
+  </div>
+{% endmacro %}

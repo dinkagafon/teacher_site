@@ -68,6 +68,9 @@
   .menu__list {
     display: block;
   }
+  .menu__item {
+    width: auto;
+  }
 }
 
 /* df */
