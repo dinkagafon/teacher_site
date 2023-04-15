@@ -5,8 +5,10 @@
 .section__header {
   padding-inline: calc((100% - var(--container-width)) / 2);
   margin-bottom: 40px;
-
   color: var(--color-text-primary);
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .section__content {

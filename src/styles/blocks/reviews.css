@@ -4,9 +4,8 @@
 }
 
 .reviews__header {
-  text-align: left;
+  text-align: center;
   color: var(--color-text-primary);
-
   margin-bottom: 40px;
   margin-left: 72px;
   margin-right: 72px;

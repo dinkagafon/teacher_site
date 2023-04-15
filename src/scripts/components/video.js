@@ -1,19 +1,27 @@
-const videoContainer = document.querySelector(".video__container");
-const pointsWrapper = document.querySelector(".video__list");
+const videoContainer = document.querySelector(".video__sticky");
+const par = document.querySelector(".video__par");
 
-if (!pointsWrapper) return;
+par.innerHTML = par.textContent
+  .trim()
+  .split(" ")
+  .map((i) => `<span>${i}</span>`)
+  .join(" ");
 
-const lastPoint = pointsWrapper.lastElementChild;
-
-const scrim = document.querySelector(".video__scrim");
+const center = videoContainer.clientHeight / 2;
 
 document.addEventListener("scroll", () => {
-  if (
-    lastPoint.getBoundingClientRect().bottom - 50 <
-    videoContainer.getBoundingClientRect().top
-  ) {
-    scrim.classList.add("video__scrim_hidden");
-  } else {
-    scrim.classList.remove("video__scrim_hidden");
+  for (let word of par.children) {
+    const coords = word.getBoundingClientRect();
+    if (coords.top > center - 100 && coords.top < center + 100) {
+      word.style.opacity = 1;
+    } else if (coords.top > center - 110 && coords.top < center + 110) {
+      word.style.opacity = 0.8;
+    } else if (coords.top > center - 130 && coords.top < center + 130) {
+      word.style.opacity = 0.4;
+    } else if (coords.top > center - 150 && coords.top < center + 150) {
+      word.style.opacity = 0.2;
+    } else {
+      word.style.opacity = 0;
+    }
   }
 });
