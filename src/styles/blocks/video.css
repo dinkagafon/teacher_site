@@ -24,6 +24,7 @@
   width: 100%;
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
   -webkit-transform: rotate(0.000001deg);
+  max-height: 90vh;
   border-radius: 50px;
   overflow: hidden;
 }
@@ -34,7 +35,7 @@
 }
 
 .video__scrim {
-  opacity: 0.6;
+  opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -65,13 +66,24 @@
 }
 
 .video__par * {
-  transition: opacity 0.1s ease;
-  opacity: 0;
+  opacity: 1;
 }
 
 /* df */
 @media (max-width: 639px) {
+  .video__par {
+    width: 100%;
+    padding: 20px;
+  }
   .video__container {
     height: 90vh;
+    background-color: var(--color-media-background);
+  }
+  .video__content {
+    top: 40vh;
+    padding-bottom: 45vh;
+  }
+  .video__scrim {
+    display: none;
   }
 }

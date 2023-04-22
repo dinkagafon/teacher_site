@@ -17,7 +17,7 @@
   </div>
   <div class="section__content video__content">
     <p class="video__par text_benefit">
-      {{ video.text }}
+      {{ video.text | spaned | safe }}
     </p>
   </div>
 </div>

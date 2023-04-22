@@ -72,28 +72,10 @@ const swiper2 = new Swiper(".experience__slider", {
       expirienceStages[0].querySelector(
         ".stage__discrip-wrapper"
       ).style.height = height + "px";
-      expirienceStages[0]
-        .querySelector(".stage__year")
-        .classList.add("text_main");
-      expirienceStages[0]
-        .querySelector(".stage__year")
-        .classList.remove("text_small");
     },
     activeIndexChange: (swiper) => {
       expirienceStages[swiper.previousIndex].classList.remove("stage_active");
       expirienceStages[swiper.activeIndex].classList.add("stage_active");
-      expirienceStages[swiper.previousIndex]
-        .querySelector(".stage__year")
-        .classList.add("text_small");
-      expirienceStages[swiper.previousIndex]
-        .querySelector(".stage__year")
-        .classList.remove("text_main");
-      expirienceStages[swiper.activeIndex]
-        .querySelector(".stage__year")
-        .classList.add("text_main");
-      expirienceStages[swiper.activeIndex]
-        .querySelector(".stage__year")
-        .classList.remove("text_small");
       expirienceStages[swiper.previousIndex].querySelector(
         ".stage__discrip-wrapper"
       ).style.height = 0;

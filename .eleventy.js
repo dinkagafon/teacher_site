@@ -42,6 +42,14 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addTemplateFormats("js");
 
+  eleventyConfig.addFilter("spaned", function (value) {
+    return value
+      .trim()
+      .split(" ")
+      .map((i) => `<span>${i}</span>`)
+      .join(" ");
+  });
+
   eleventyConfig.addExtension("js", {
     outputFileExtension: "js",
     compile: async (_, path) => {
