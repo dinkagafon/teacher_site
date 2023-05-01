@@ -1,0 +1,13 @@
+{% macro price(color, header, count, details) %}
+  <div class="price" style="border-color: {{ color }}">
+    <p class="price__header text_h3">{{ header }}</p>
+    <p class="price__count text_h2" style="color: {{ color }}">{{ count }}</p>
+    <div class="price__deteils" >
+      {% for detail in details %}
+        <div class="price__point">
+          <span class="price__text text_small">{{ detail }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

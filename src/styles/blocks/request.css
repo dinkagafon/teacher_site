@@ -13,13 +13,21 @@
   flex-direction: column;
   align-items: center;
   width: 50%;
-  margin: 0 auto;
+  margin: 64px auto;
 }
 .request__succes-text {
   text-align: center;
 }
 .request__succes_visible {
   display: flex;
+}
+
+.request__succes-img {
+  width: 50%;
+}
+.request__succes-img img {
+  width: 100%;
+  margin-left: 8px;
 }
 
 /* md */
@@ -36,5 +44,8 @@
 @media (max-width: 639px) {
   .request__container {
     row-gap: 0;
+  }
+  .request__succes {
+    margin: 32px auto;
   }
 }

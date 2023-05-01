@@ -135,7 +135,6 @@
     display: none;
   }
   .form__checkbox {
-    width: 100%;
     text-align: center;
   }
   .form__checkbox-container_mobile-one-row {

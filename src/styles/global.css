@@ -16,6 +16,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-family-text);
+  color: var(--color-text-primary);
 }
 
 main {

@@ -1,0 +1,36 @@
+.price {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 40px 24px;
+  text-align: center;
+  border-color: var(--color-main-accent-contrast);
+}
+.price__header {
+  margin-bottom: 8px;
+}
+
+.price__count {
+  color: var(--color-main-accent-contrast);
+}
+.price__deteils {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.price__point {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  text-align: initial;
+}
+
+/* df */
+@media (max-width: 639px) {
+  .price {
+    padding: 32px 16px;
+  }
+  .price__deteils {
+    margin-top: 16px;
+  }
+}

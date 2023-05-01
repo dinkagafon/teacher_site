@@ -10,7 +10,7 @@
           <input type="text" class="text_small" name="children" id="children" placeholder="Ксения">
           <label for="tel"  class="form__title text_main">Телефон</label>
           <input type="phone" class="text_small" name="parent" id="phone" required>
-          <span class="form__title form__title_top text_main">Направления</span>
+          <span class="form__title form__title_top text_main">Выберите направления</span>
           <div class="form__checkbox-container text_small">
             {% for direction in collections.directions %}
               <input type="checkbox" name="direction" value="{{ direction.fileSlug }}" id="{{ direction.fileSlug }}" {{'checked' if direction.url === page.url}}>
@@ -19,7 +19,7 @@
               </label>
             {% endfor %}
           </div>
-          <span class="form__title form__title_top text_main">Способ связи</span>
+          <span class="form__title form__title_top text_main">Выберите способ связи</span>
           <div class="form__checkbox-container form__checkbox-container_mobile-one-row text_small">
             <input type="checkbox" name="connect" value="telegram" id="telegram">
             <label class="form__checkbox" for="telegram">
@@ -28,7 +28,7 @@
       </label>
             <input type="checkbox" name="connect" value="whatsup" id="whatsup">
             <label class="form__checkbox" for="whatsup">
-        whatsup
+        whatsApp
 
       </label>
             <input type="checkbox" name="connect" value="sms" id="sms">
@@ -54,7 +54,7 @@
     </div>
     <div class="request__succes">
       <picture class="request__succes-img">
-        <img src="/img/photos/sticker_mama.png" alt="Фотография Юлии">
+        <img src="/img/photos/sticker_mama.webp" alt="Фотография Юлии">
       </picture>
       <h2 class="request__succes-text text_h1">
         Cкоро я свяжусь с Вами,

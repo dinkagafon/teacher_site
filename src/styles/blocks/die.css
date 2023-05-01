@@ -1,5 +1,5 @@
 .die {
-  color: var(--white);
+  color: var(--color-text-primary);
   padding: 0.75em 1em;
   background-color: var(--main-accent);
   display: inline-block;

@@ -33,7 +33,7 @@ inputPhoone.addEventListener("click", setMask);
 
 async function handleSubmit(event) {
   event.preventDefault();
-  console.log(iti.isValidNumber(), iti.getNumber());
+
   if (!iti.isValidNumber()) {
     inputPhoone.classList.add("form__input_error");
     errorMes.textContent = "Номер введен неверно";
@@ -51,9 +51,12 @@ async function handleSubmit(event) {
 
   if (response.ok) {
     container.classList.add("request__container_hidden");
-    document
-      .querySelector(".request__succes")
-      .classList.add("request__succes_visible");
+    const succesContainer = document.querySelector(".request__succes");
+    succesContainer.classList.add("request__succes_visible");
+    scrollTo(
+      0,
+      succesContainer.getBoundingClientRect().top + window.pageYOffset - 200
+    );
   } else {
     errorMes.textContent =
       "Заявка не отправилась. Попробуйте еще раз или позвоните на номер +7 (915) 355-64-31";

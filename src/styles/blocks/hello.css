@@ -4,6 +4,7 @@
   gap: 24px;
   flex-wrap: wrap;
   align-items: center;
+  flex-direction: row-reverse;
 }
 
 .hello__photo {
@@ -13,13 +14,13 @@
 }
 
 .hello__img {
-  width: 118%;
+  width: 120%;
   display: block;
   position: absolute;
   bottom: 0;
   height: 100%;
   transform: translate(-50%, 0);
-  left: 51%;
+  left: 48%;
 }
 
 .hello__img img {
@@ -58,36 +59,26 @@
 
 .hello__work-time {
   position: absolute;
-  bottom: 22%;
-  left: -20%;
+  bottom: 3%;
+  right: -5%;
   animation: float 4s ease-in-out infinite;
 }
 
-.hello__online {
+.hello__offline {
   position: absolute;
-  top: 10%;
-  right: -10%;
+  top: 12%;
+  right: -5%;
   animation: float 3.5s ease-in-out infinite;
   animation-direction: reverse;
   animation-delay: 0.5s;
 }
 
-.hello__phone {
+.hello__online {
   position: absolute;
-  bottom: 10%;
-  right: -15%;
-  animation: float 3.8s ease-in-out infinite;
-  animation-delay: 0.2s;
-}
-
-.hello__phone:focus {
-  outline: none;
-}
-
-.hello__phone:focus-visible > * {
-  outline-offset: 2px;
-  outline-style: auto;
-  outline-color: var(--color-main-accent-contrast);
+  bottom: 30%;
+  left: -20%;
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 0.5s;
 }
 
 .hello__link:focus-visible {
@@ -123,10 +114,6 @@
   .hello__discription {
     margin-bottom: 32px;
   }
-  .hello__content {
-    align-items: flex-end;
-    text-align: right;
-  }
 }
 
 /* xl */
@@ -139,10 +126,6 @@
   }
   .hello__discription {
     margin-bottom: 32px;
-  }
-  .hello__content {
-    align-items: flex-end;
-    text-align: right;
   }
 }
 
@@ -157,10 +140,6 @@
   .hello__discription {
     margin-bottom: 24px;
   }
-  .hello__content {
-    align-items: flex-end;
-    text-align: right;
-  }
 }
 
 /* md */
@@ -174,10 +153,6 @@
   .hello__discription {
     margin-bottom: 24px;
   }
-  .hello__content {
-    align-items: center;
-    text-align: center;
-  }
 }
 
 /* sm */
@@ -190,10 +165,6 @@
   }
   .hello__discription {
     margin-bottom: 24px;
-  }
-  .hello__content {
-    align-items: center;
-    text-align: center;
   }
 }
 
@@ -222,16 +193,16 @@
     border-top-right-radius: 400px;
   }
   .hello__work-time {
-    bottom: 16%;
-    left: -15%;
+    bottom: 5%;
+    right: -15%;
   }
   .hello__online {
-    top: 5%;
-    right: 3%;
+    bottom: 25%;
+    left: -10%;
   }
-  .hello__phone {
-    bottom: 5%;
-    right: -13%;
+  .hello__offline {
+    top: 9%;
+    right: -10%;
   }
   .hello__link {
     width: 100%;

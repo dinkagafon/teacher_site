@@ -9,17 +9,29 @@
     <div class="anchors text_small">
       <ul class="anchors__list" style="--hover-color: {{ 'var(--color-main-accent-contrast) 'if page.url === '/' else colors.accent_contrast}}">
         {% if page.url === '/' %}
-          {% set anchors = anchors_main %}
+          {% for item in anchors_main %}
+            <a class="anchors__link" href="{{ item.href }}">
+              <li class="anchors__item">
+                {{- item.title -}}
+              </li>
+            </a>
+          {% endfor %}
         {% else %}
-          {% set anchors = anchors_directions %}
+          {% for item in sections %}
+            <a class="anchors__link" href="#{{ item.name }}">
+              <li class="anchors__item">
+                {{- item.anchor -}}
+              </li>
+            </a>
+          {% endfor %}
+          {% for item in anchors_directions %}
+            <a class="anchors__link" href="{{ item.href }}">
+              <li class="anchors__item">
+                {{- item.title -}}
+              </li>
+            </a>
+          {% endfor %}
         {% endif %}
-        {% for item in anchors %}
-          <a class="anchors__link" href="{{ item.href }}">
-            <li class="anchors__item">
-              {{- item.title -}}
-            </li>
-          </a>
-        {% endfor %}
       </ul>
     </div>
     <button class="header__menu-button text_small">
@@ -40,7 +52,7 @@
     <nav>
       <ul class="menu__list text_h1">
         <li class="menu__item" >
-          <a class="menu__link" href="/" tabindex='-1' style="color: {{ 'var(--main-accent)' if page.url === '/' }}">
+          <a class="menu__link" href="/" tabindex='-1' style="color: {{ 'var(--color-main-accent-contrast)' if page.url === '/' }}">
             Обо мне
           </a>
         </li>

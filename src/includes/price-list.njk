@@ -1,0 +1,16 @@
+<section class="section">
+  <h2 class="section__header text_h2">какой вариант подойдет именно вам?</h2>
+  <div class="section__content">
+    <div class="list">
+      {% from 'macros/price.njk' import price %}
+      {% for item in prices %}
+        {{ price(
+          header=item.header,
+          count=item.count,
+          details=item.details,
+          color=colors.accent_contrast
+				) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>

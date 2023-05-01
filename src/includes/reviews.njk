@@ -10,7 +10,7 @@
               <p class="comment__text text_main">
                 {{- comment.text -}}
               </p>
-              <button class="comment__show-more-button comment__show-more-button_hidden" tabindex="{{ 0 if loop.index0 === 0 else -1}}">Показать больше</button>
+              <button class="comment__show-more-button comment__show-more-button_hidden text_small" tabindex="{{ 0 if loop.index0 === 0 else -1}}">Показать больше</button>
               <div class="comment__direction-container text_small" >
                 {% for direct in comment.directs %}
                   {% for direction in collections.directions %}
